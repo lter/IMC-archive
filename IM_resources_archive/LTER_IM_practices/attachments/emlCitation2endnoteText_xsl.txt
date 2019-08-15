@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <!-- 
+    stylesheet to convert an EML-2.1 citation to Endnote text output, with tags for the LTER network
+    database. See:     http://savanna.lternet.edu/reports/endnotetags.php
+    for mappings.
+    
+    To Do:
+    finish output for these EML citation types:
+    manuscript
+   personalConnumication
+   map
+   generic
+   audoVisual
+   presentation
+     -->
+  <xsl:output method="text" indent="no" media-type="text/string"></xsl:output>
+  <xsl:strip-space elements="*"></xsl:strip-space>
+
+  <xsl:param name="myString"></xsl:param>
+  <xsl:variable name="lineEnd">
+    <xsl:text>&#10;</xsl:text>
+  </xsl:variable>
+
+  <xsl:variable name="singleWhitespace">
+    <xsl:text>&#x0020;</xsl:text>
+  </xsl:variable>
+
+  <!-- 
+    
+    template to strip unacceptable whitespace from strings. All are converted to single space, &#x0020;
+    nobreaking space &#xa0;
+    tabs &#09;
+    newlines &#10;       -->
+  <xsl:template name="clean-whitespace">
+    <xsl:param name="myString" select="$myString"></xsl:param>
+    <xsl:value-of
+      select="translate($myString,&quot;&#xa0;&#09;&#10;&quot;, &quot;&#x0020;&quot; )"
+    ></xsl:value-of>
+  </xsl:template>
+
+
+  <xsl:template match="citation">
+    <!-- 
+  IDENTIFIERS-->
+    <!-- accession number-->
+    <xsl:text>%M sbc-</xsl:text>
+    <xsl:value-of select="alternateIdentifier[@system='sbclter-bibliography' ] "></xsl:value-of>
+    <xsl:value-of select="$lineEnd"></xsl:value-of>
+    <!-- doi -->
+    <xsl:if test="alternateIdentifier[@system='DOI' ]">
+      <xsl:text>%R</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="alternateIdentifier[@system='DOI' ] "></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!-- issn (serials) -->
+    <xsl:if test="alternateIdentifier[@system='ISSN' ]">
+      <xsl:text>%@</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="alternateIdentifier[@system='ISSN' ] "></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!-- isbn (books) -->
+    <xsl:if test="alternateIdentifier[@system='ISBN' ]">
+      <xsl:text>%@</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="alternateIdentifier[@system='ISBN' ] "></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!-- 
+      TYPE -->
+    <xsl:text>%0</xsl:text>
+    <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+    <xsl:choose>
+      <xsl:when test="article">
+        <xsl:text>Journal Article</xsl:text>
+      </xsl:when>
+      <xsl:when test="conferenceProceedings">
+        <xsl:text>Conference Proceedings</xsl:text>
+      </xsl:when>
+      <xsl:when test="chapter">
+        <xsl:text>Book Section</xsl:text>
+      </xsl:when>
+      <xsl:when test="book">
+        <xsl:text>Book</xsl:text>
+      </xsl:when>
+      <xsl:when test="editedBook">
+        <xsl:text>Edited Book</xsl:text>
+      </xsl:when>
+      <xsl:when test="thesis">
+        <xsl:text>Thesis</xsl:text>
+      </xsl:when>
+      <xsl:when test="report">
+        <xsl:text>Report</xsl:text>
+      </xsl:when>
+      <xsl:when test="manuscript">
+        <xsl:text>Manuscript</xsl:text>
+      </xsl:when>
+      <xsl:when test="personalConnumication">
+        <xsl:text>Personal Communication</xsl:text>
+      </xsl:when>
+      <xsl:when test="map">
+        <xsl:text>Map</xsl:text>
+      </xsl:when>
+      <xsl:when test="generic">
+        <xsl:text>Generic</xsl:text>
+      </xsl:when>
+      <xsl:when test="audioVisual">
+        <xsl:text>Audiovisual Material</xsl:text>
+      </xsl:when>
+      <xsl:when test="presentation">
+        <xsl:text>Presentation</xsl:text>
+      </xsl:when>
+    </xsl:choose>
+    <xsl:value-of select="$lineEnd"></xsl:value-of>
+    <!-- 
+      TITLE -->
+    <xsl:text>%T</xsl:text>
+    <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+    <xsl:call-template name="clean-whitespace">
+      <xsl:with-param name="myString" select="title"></xsl:with-param>
+    </xsl:call-template>
+    <xsl:value-of select="$lineEnd"></xsl:value-of>
+    <!-- 
+      AUTHORS -->
+    <xsl:for-each select="creator/individualName">
+      <xsl:text>%A</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="surName"></xsl:value-of>
+      <xsl:text>, </xsl:text>
+      <xsl:for-each select="givenName">
+        <xsl:value-of select="."></xsl:value-of>
+        <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      </xsl:for-each>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:for-each>
+    <!-- 
+      pub date -->
+    <xsl:text>%D</xsl:text>
+    <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+    <xsl:choose>
+      <xsl:when test="pubDate">
+        <xsl:value-of select="pubDate"></xsl:value-of>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>in-press</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:value-of select="$lineEnd"></xsl:value-of>
+    <!--
+      distribution url -->
+    <xsl:if test="distribution/online/url">
+      <xsl:text>%U</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="distribution/online/url"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+
+    <!-- 
+
+this group for journal articles-->
+    <!-- journal name -->
+    <xsl:if test="article">
+      <xsl:text>%J</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:call-template name="clean-whitespace">
+        <xsl:with-param name="myString" select="article/journal"></xsl:with-param>
+      </xsl:call-template>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+
+    <!-- journal volume -->
+    <xsl:if test="article/volume">
+      <xsl:text>%V</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="article/volume"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+
+    <!-- journal page range -->
+    <xsl:if test="article/pageRange">
+      <xsl:text>%P</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="article/pageRange"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+
+    <!--books,title -->
+    <xsl:if test="chapter/bookTitle">
+      <xsl:text>%B</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="chapter/bookTitle"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!-- 
+
+editors: editedBook, conferenceProceedings-->
+    <xsl:if test="chapter/editor | conferenceProceedings/editor">
+      <xsl:text>%E</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:for-each select="*/editor">
+        <xsl:value-of select="individualName/surName"></xsl:value-of>
+        <xsl:if test="individualName/givenName">
+          <xsl:text>, </xsl:text>
+          <xsl:for-each select="individualName/givenName">
+            <xsl:value-of select="."></xsl:value-of>
+            <xsl:if test="position() != last()">
+              <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+            </xsl:if>
+          </xsl:for-each>
+          <xsl:if test="position() != last()">
+            <xsl:text>; </xsl:text>
+          </xsl:if>
+        </xsl:if>
+
+      </xsl:for-each>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+
+
+    <!--
+      
+      publishers  -->
+    <xsl:if test="book | chapter | editedBook | report |conferenceProceedings | audioVisual">
+      <!--  note: for conferenceProceedings, the publisher is also listed under sponsor, below  -->
+      <xsl:text>%I</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:call-template name="clean-whitespace">
+        <xsl:with-param name="myString" select="*/publisher/organizationName"></xsl:with-param>
+      </xsl:call-template>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+
+    <xsl:if test=" audioVisual">
+      <xsl:text>%C</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:call-template name="clean-whitespace">
+        <xsl:with-param name="myString" select="audioVisual/publicationPlace"></xsl:with-param>
+      </xsl:call-template>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if> 
+    <!-- 
+      total pages (books, theses, reports)  -->
+    <xsl:if
+      test="book/totalPages | editedBook/totalPages | chapter/totalPages | thesis/totalPages | report/totalPages">
+      <xsl:text>%P</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="*/totalPages"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!--
+      
+      
+      thesis, academia stuff -->
+    <xsl:if test="thesis">
+      <!--  department -->
+      <xsl:text>%B</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="thesis/institution/organizationName"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+
+    <xsl:if test="thesis">
+      <!--  degree -->
+      <xsl:text>%9</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="thesis/degree"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+
+    <xsl:if test="thesis">
+      <!-- university -->
+      <xsl:text>%I</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:for-each select="thesis/institution/address/*">
+        <xsl:value-of select="."></xsl:value-of>
+        <xsl:if test="position() != last()">
+          <xsl:text>, </xsl:text>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!-- 
+
+report number-->
+    <xsl:if test="report/reportNumber">
+      <xsl:text>%@</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="report/reportNumber"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!--
+            
+      conference proceedings-->
+    <xsl:if test="conferenceProceedings/publisher">
+      <!--  organization or sponsor -->
+      <xsl:text>%?</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="conferenceProceedings/publisher/organizationName"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+      <!--  
+        name -->
+    <xsl:if test="conferenceProceedings/conferenceName">
+      <xsl:text>%B</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:value-of select="conferenceProceedings/conferenceName"></xsl:value-of>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!-- 
+      conf location -->
+    <xsl:if test="conferenceProceedings/conferenceLocation">
+      <xsl:text>%C</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:for-each select="conferenceProceedings/conferenceLocation/*">
+        <xsl:value-of select="."></xsl:value-of>
+        <xsl:if test="position() != last()">
+          <xsl:text>, </xsl:text>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!-- 
+      conf date -->
+    <xsl:if test="conferenceProceedings/conferenceDate">
+      <xsl:text>%8</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:for-each select="conferenceProceedings/conferenceDate">
+        <xsl:value-of select="."></xsl:value-of>
+        <xsl:if test="position() != last()">
+          <xsl:text>, </xsl:text>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+    <!-- 
+      conf series title   -->
+    <xsl:if test="conferenceProceedings/bookTitle">
+      <xsl:text>%S</xsl:text>
+      <xsl:value-of select="$singleWhitespace"></xsl:value-of>
+      <xsl:for-each select="conferenceProceedings/bookTitle">
+        <xsl:value-of select="."></xsl:value-of>
+        <xsl:if test="position() != last()">
+          <xsl:text>, </xsl:text>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:value-of select="$lineEnd"></xsl:value-of>
+    </xsl:if>
+
+<!-- 
+add more mappings as needed for generic, personalComm, presentation, av
+-->
+
+    <!--  this adds a newline at the end of each entry -->
+    <xsl:value-of select="$lineEnd"></xsl:value-of>
+  </xsl:template>
+
+
+
+
+
+
+
+
+
+</xsl:stylesheet>

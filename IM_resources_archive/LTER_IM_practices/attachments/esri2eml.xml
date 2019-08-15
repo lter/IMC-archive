@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<translator name="ESRI2EML" xslt="Transforms\esri10_2_eml210.xsl" logLevel="error" stopOnErrors="no">
+	<!-- empty -->
+</translator>

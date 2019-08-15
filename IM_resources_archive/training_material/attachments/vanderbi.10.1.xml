@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml packageId="knb-lter-van.10.1" system="knb" xmlns:eml="eml://ecoinformatics.org/eml-2.1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.0 eml.xsd">
+ <access authSystem="knb" order="allowFirst">
+  <allow>
+   <principal>public</principal>
+   <permission>read</permission>
+  </allow>
+ </access>
+ <dataset>
+  <title>Temperature and Light Data from Hobo Thermoregulation Study, UNM Campus, August
+   2012</title>
+  <creator id="1344525431081">
+   <individualName>
+    <salutation>Dr.</salutation>
+    <givenName>Kristin</givenName>
+    <surName>Vanderbilt</surName>
+   </individualName>
+   <organizationName>Sevilleta LTER</organizationName>
+   <address><deliveryPoint>Department of Biology</deliveryPoint>
+<deliveryPoint>University of New Mexico</deliveryPoint>
+<city>Albuquerque</city>
+<administrativeArea>NM</administrativeArea>
+<postalCode>87131</postalCode>
+</address>
+   <electronicMailAddress>vanderbi@sevilleta.unm.edu</electronicMailAddress>
+  </creator>
+  <abstract>
+   <para>In this study we examined how H. pedensis responds to being immersed in pond water in shade
+    and sun.</para>
+  </abstract>
+  <keywordSet>
+   <keyword>Freshwater ecosystems</keyword>
+   <keyword>Aquatic organisms</keyword>
+   <keyword>Thermoregulatory behavior</keyword>
+   <keywordThesaurus>nbii</keywordThesaurus>
+  </keywordSet>
+  <intellectualRights>
+   <para>This data were collected under the auspices of the Sevilleta LTER and available to
+    all.</para>
+  </intellectualRights>
+  <coverage>
+   <geographicCoverage>
+    <geographicDescription>UNM Campus</geographicDescription>
+    <boundingCoordinates>
+     <westBoundingCoordinate>-102.25</westBoundingCoordinate>
+     <eastBoundingCoordinate>-102.25</eastBoundingCoordinate>
+     <northBoundingCoordinate>31.75</northBoundingCoordinate>
+     <southBoundingCoordinate>31.75</southBoundingCoordinate>
+    </boundingCoordinates>
+   </geographicCoverage>
+   <temporalCoverage>
+    <singleDateTime>
+     <calendarDate>2012-08-09</calendarDate>
+    </singleDateTime>
+   </temporalCoverage>
+  </coverage>
+  <contact>
+   <references>1344525431081</references>
+  </contact>
+  <methods>
+   <methodStep>
+    <description>
+     <section>
+      <title>Transect Location</title>
+      <para>A 50 m translect was laid out running N-S. One end was under a tree, then it passed
+       through an open area, and then ended in a pond.</para>
+     </section>
+    </description>
+    <instrumentation>Hobo Temperature and Light sensor</instrumentation>
+   </methodStep>
+   <methodStep>
+    <description>
+     <section>
+      <title>Temperature Measurements</title>
+      <para>The Hobo was placed in the shade under the tree and then moved every five minutes a
+       distance of 5 m along the transect.</para>
+     </section>
+    </description>
+   </methodStep>
+  </methods>
+  <dataTable id="1344527857810">
+   <entityName>HoboDataFile.csv</entityName>
+   <physical id="1344527102213">
+    <objectName>HoboDataFile.csv</objectName>
+    <size unit="byte">44681</size>
+    <dataFormat>
+     <textFormat>
+      <numHeaderLines>1</numHeaderLines>
+      <recordDelimiter>\r\n</recordDelimiter>
+      <attributeOrientation>column</attributeOrientation>
+      <simpleDelimited>
+       <fieldDelimiter>,</fieldDelimiter>
+      </simpleDelimited>
+     </textFormat>
+    </dataFormat>
+    <distribution>
+     <online>
+      <url function='download'>http://lter.limnology.wisc.edu/sites/default/files/ntl/data/HoboDataFile.csv</url>
+     </online>
+    </distribution>
+   </physical>
+   <attributeList>
+    <attribute id="1344527857810">
+     <attributeName>ID</attributeName>
+     <attributeDefinition>overall record ID</attributeDefinition>
+     <measurementScale>
+      <nominal>
+       <nonNumericDomain>
+        <textDomain>
+         <definition>overall unique record ID</definition>
+        </textDomain>
+       </nonNumericDomain>
+      </nominal>
+     </measurementScale>
+    </attribute>
+    <attribute id="1344527857811">
+     <attributeName>hobo_id</attributeName>
+     <attributeDefinition>identification number of the hobo instrument used</attributeDefinition>
+     <measurementScale>
+      <nominal>
+       <nonNumericDomain>
+        <textDomain>
+         <definition>Eight digit number</definition>
+        </textDomain>
+       </nonNumericDomain>
+      </nominal>
+     </measurementScale>
+    </attribute>
+    <attribute id="1344527857812">
+     <attributeName>record_id</attributeName>
+     <attributeDefinition>order in which records were collected by the Hobo
+      unit</attributeDefinition>
+     <measurementScale>
+      <ordinal>
+       <nonNumericDomain>
+        <textDomain>
+         <definition>integers ranging from 1 to 1000</definition>
+        </textDomain>
+       </nonNumericDomain>
+      </ordinal>
+     </measurementScale>
+    </attribute>
+    <attribute id="1344527857813">
+     <attributeName>dateTime</attributeName>
+     <attributeDefinition>TimeStamp</attributeDefinition>
+     <measurementScale>
+      <dateTime>
+       <formatString>YYYY-MM-DDThh:mm:ss</formatString>
+      </dateTime>
+     </measurementScale>
+    </attribute>
+    <attribute id="1344527857814">
+     <attributeName>temperature_c</attributeName>
+     <attributeDefinition>temperature recorded by Hobo measured in degrees
+      celsius</attributeDefinition>
+     <measurementScale>
+      <interval>
+       <unit>
+        <standardUnit>celsius</standardUnit>
+       </unit>
+       <numericDomain>
+        <numberType>real</numberType>
+       </numericDomain>
+      </interval>
+     </measurementScale>
+    </attribute>
+    <attribute id="1344527857815">
+     <attributeName>light_lux</attributeName>
+     <attributeDefinition>Light intensity</attributeDefinition>
+     <measurementScale>
+      <ratio>
+       <unit>
+        <standardUnit>lux</standardUnit>
+       </unit>
+       <numericDomain>
+        <numberType>real</numberType>
+       </numericDomain>
+      </ratio>
+     </measurementScale>
+    </attribute>
+    <attribute id="1344527857816">
+     <attributeName>shade_open</attributeName>
+     <attributeDefinition>indicates whether the Hobo was inside or outside a building, and the type
+      of shade it received (if any)</attributeDefinition>
+     <measurementScale>
+      <nominal>
+       <nonNumericDomain>
+        <enumeratedDomain>
+         <codeDefinition>
+          <code>Vitex agnus-castus</code>
+          <definition>shrub</definition>
+         </codeDefinition>
+         <codeDefinition>
+          <code>open</code>
+          <definition>unshaded</definition>
+         </codeDefinition>
+         <codeDefinition>
+          <code>Celtis occidentalis</code>
+          <definition>shrub</definition>
+         </codeDefinition>
+         <codeDefinition>
+          <code>Platanus hybrida</code>
+          <definition>tree</definition>
+         </codeDefinition>
+         <codeDefinition>
+          <code>Styphnolobium japonicum</code>
+          <definition>tree</definition>
+         </codeDefinition>
+         <codeDefinition>
+          <code>outside building</code>
+          <definition>receiving natural light</definition>
+         </codeDefinition>
+         <codeDefinition>
+          <code>inside building</code>
+          <definition>receiving unnatural light</definition>
+         </codeDefinition>
+         <codeDefinition>
+          <code>Euonymus atropurpurea</code>
+          <definition>shrub</definition>
+         </codeDefinition>
+         <codeDefinition>
+          <code>Pinus edulis</code>
+          <definition>tree</definition>
+         </codeDefinition>
+        </enumeratedDomain>
+       </nonNumericDomain>
+      </nominal>
+     </measurementScale>
+    </attribute>
+    <attribute id="1344527857817">
+     <attributeName>ground_cover</attributeName>
+     <attributeDefinition>type of substrate the hobo was on</attributeDefinition>
+     <measurementScale>
+      <nominal>
+       <nonNumericDomain>
+        <textDomain>
+         <definition>type of substrate the Hobo was on</definition>
+        </textDomain>
+       </nonNumericDomain>
+      </nominal>
+     </measurementScale>
+    </attribute>
+    <attribute id="1344527857818">
+     <attributeName>flags</attributeName>
+     <attributeDefinition>codes that clarify the content of the data record</attributeDefinition>
+     <measurementScale>
+      <nominal>
+       <nonNumericDomain>
+        <enumeratedDomain>
+         <codeDefinition>
+          <code>sun spot</code>
+          <definition>Hobo was placed in shade, but ended up in a sunny spot within the
+           shade</definition>
+         </codeDefinition>
+         <codeDefinition>
+          <code>cloud</code>
+          <definition>A cloud passed over the sun while the measurement was being taken</definition>
+         </codeDefinition>
+        </enumeratedDomain>
+       </nonNumericDomain>
+      </nominal>
+     </measurementScale>
+    </attribute>
+   </attributeList>
+   <numberOfRecords>650</numberOfRecords>
+  </dataTable>
+ </dataset>
+</eml:eml>

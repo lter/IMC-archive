@@ -1,0 +1,126 @@
+R Programming Cheat Sheet
+
+INSTALLATION
+update.packages() updates already installed packages
+install.packages("RODBC") adds package ODBC
+
+OBJECTS
+
+ls() or objects() - lists objects in current workspace
+
+rm(object) - removes an object   Note: rm(list=ls()) deletes pretty much everything (without asking)
+rm(list= ls()[!(ls() %in% c('keepob1','keepob2'))]) removes all but what is in the list
+
+levels(myvector) - provides list of levels factor vector myvector
+
+mode(object) tells the type of the object 
+
+attributes(vector) - provides info on the type and contents of object
+
+FACTORS
+factors consist of an index vector and a value vector. Use:
+as.numeric(levels(f))[as.integer(f)]  to convert numbers stored in
+a factor to numeric. You can also use: as.numeric(as.character(f)) (slower)
+
+VECTOR OPERATIONS
+
+newvec <- ifelse(z > 10,truevalue,falsevalue)
+
+DATA FRAMES
+
+myframe <- read.csv(infileorURL, header=TRUE) - reads a CSV file into a dataframe
+
+names(myframe) - lists names of vectors in the data frame
+
+cbind(myframe,newvector) - adds newvector to myframe
+
+myframe$myvector - accesses myvector from frame myframe (not needed if use attach below)
+
+attach(myframe) - use vectors from myframe
+
+edit(myframe) - spreadsheet-style editor for values
+myframe <-edit(data.frame()) to create a new dataframe and edit it. 
+
+View(myframe) - like edit, but all you can do is look (note, capital V)
+
+colnames(myframe) <- mynames   Set the column names from mynames
+
+DATA FRAME OPERATIONS
+
+subset1 <- subset(myframe, A < 2) # select lines
+m1 <- merge(authors, books, by.x = "surname", by.y = "name") # merge dataframes by keys
+ranks <- rank(myframe$var2) # add a ranks for var2 to your data frame
+cbind(myframe,ranks)
+colnames(df) <- c("col1","col2") # Set names for data frame columns 
+
+names(df)[names(df)=="oldvarname"] = "newvarname" #Rename a vector in a data frame
+
+reshape() can be used to convert columns to rows etc.
+check for duplicates:  df[duplicated(df),] lists duplicated lines (don't forget trailing ,)
+
+
+PACKAGES
+library(package) - attaches package
+search()  - lists attached packages
+
+
+
+DATE CONVERSIONS
+
+library(date)
+date<- as.Date(welldata$datelev,format="%Y-%m-%d")
+welldata <- cbind(welldata,date)
+Posixltdatetime <- strptime(datetimestr,format="%Y-%m-%d %H:%M:%S")
+timeinsecondssince1970<-as.POSIXct(Posixltdatetime)
+ISOdatetime(year,month,day,hour,min,sec,tz="")
+
+
+STATS
+
+summary(myframe) - summarizes data (good way to get names etc.)
+myavgframe=mean(myframe) - put means into new frame
+xtabs(~ ISLAND+SPECIES+CAPNUM)  or xtabs(Freq ~ ISLAND+SPECIES+CAPNUM) where Freq has counts
+
+REPEATING
+
+by(myframe,myframe$myfactor,summary) - repeats summary function for each value of myfactor in myframe
+foreach package: foreach (i=c(1,2,3,4)) %do% myfunc(i)
+
+
+
+LATTICE GRAPHICS
+
+xyplot(volts~time|station,type='l') - line plot
+
+
+
+
+FUNCTIONS
+Adding functions is easy:
+myfunc <- function(param1, param2, fixedparam<-c("p1","p2"), param4<-NULL)
+{
+Body of function goes here
+return(result)
+}
+
+SYSTEM 
+source("myRcode.r",echo=TRUE) will run the code in file or URL myRcode.r other options cont
+
+IO with Excel 
+#using RODBC to write excel:
+save2excel <- function(x) sqlSave(xlsFile,x, tablename = x$Species[1], rownames = FALSE)
+xlsFile <- odbcConnectExcel("d:/work/keplerwork/testRODBC.xls", readOnly = FALSE)
+save2excel(communityList)
+odbcCloseAll()
+
+also check out the "foreign" package
+
+SET OBJECT NAMES ON THE FLY
+
+assign(paste(taxon,"BA",sep="_"),value)  # when taxon="x" equvalent x_BA <- value
+
+get(myVarNameString) - returns the vector whose name is stored in myVarNameString
+
+ERROR HANDLING
+see try() and trycatch()
+also options() lets you turn off error reporting

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.0"
+    xmlns:ds="eml://ecoinformatics.org/dataset-2.1.0"
+    xmlns:doc="eml://ecoinformatics.org/documentation-2.1.0"
+    xmlns:cit="eml://ecoinformatics.org/literature-2.1.0"
+    xmlns:prot="eml://ecoinformatics.org/protocol-2.1.0"
+    xmlns:res="eml://ecoinformatics.org/resource-2.1.0"
+    xmlns:sw="eml://ecoinformatics.org/software-2.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.0 http://nis.lternet.edu/schemas/EML/eml-2.1.0/eml.xsd"
+    packageId="knb-lter-nis.23.1" system="pasta" scope="system">
+    <dataset>
+        <title>
+            Derived NPP data from ONL, NRJ, and VES
+            field stations from 1906 through 2006.
+        </title>
+        <creator>
+            <organizationName>
+                LTER Network Information System
+            </organizationName>
+            <address>
+                <deliveryPoint>LTER Network Office</deliveryPoint>
+                <deliveryPoint>Department of Biology</deliveryPoint>
+                <deliveryPoint>MSC 03 2020</deliveryPoint>
+                <deliveryPoint>1 University of New Mexico</deliveryPoint>
+                <city>Albuquerque</city>
+                <administrativeArea>NM</administrativeArea>
+                <postalCode>87131-0001</postalCode>
+                <country>USA</country>
+            </address>
+            <electronicMailAddress>
+                nis-im@lternet.edu
+            </electronicMailAddress>
+        </creator>
+        <abstract>
+            <section>
+                <para>
+                    The following synthesis process
+                    generates a derived NPP product for
+                    four Long-Term Ecological Research
+                    sites by converting site source specific
+                    values of NPP to the global schema
+                    defined for the NIS NPP derived product.
+                </para>
+            </section>
+        </abstract>
+        <contact>
+            <positionName>NIS Information Manager</positionName>
+            <organizationName>
+                LTER Network Office
+            </organizationName>
+            <address>
+                <deliveryPoint>LTER Network Office</deliveryPoint>
+                <deliveryPoint>Department of Biology</deliveryPoint>
+                <deliveryPoint>MSC 03 2020</deliveryPoint>
+                <deliveryPoint>1 University of New Mexico</deliveryPoint>
+                <city>Albuquerque</city>
+                <administrativeArea>NM</administrativeArea>
+                <postalCode>87131-0001</postalCode>
+                <country>USA</country>
+            </address>
+            <electronicMailAddress>
+                nis-im@lternet.edu
+            </electronicMailAddress>
+        </contact>
+        <methods>
+            <methodStep>
+                <description>
+                    <section>
+                        <para>
+                            We utilize NPP data collected
+                            from 1906 to 2006 from the ONL
+                            LTER site. The ONL NPP data unit
+                            definition is kg/m^2/yr. This
+                            unit does not require conversion.
+                        </para>
+                    </section>
+                </description>
+                <dataSource>
+                    <title>
+                        NPP data from ONL 1906 to 2006
+                    </title>
+                    <creator>
+                        <organizationName>
+                            ONL LTER
+                        </organizationName>
+                    </creator>
+                    <distribution>
+                        <online>
+                            <url>
+                                http://metacat.lternet.edu/knb/metacat/knb-lter-onl.23.1
+                            </url>
+                        </online>
+                    </distribution>
+                    <contact>
+                        <organizationName>
+                            ONL LTER
+                        </organizationName>
+                        <positionName>
+                            ONL Information Manager
+                        </positionName>
+                        <electronicMailAddress>
+                            im@onl.lternet.edu
+                        </electronicMailAddress>
+                    </contact>
+                </dataSource>
+            </methodStep>
+            <!-- similar methodStep subtrees here for the
+                remaining three sites: NRJ and VES -->
+            <methodStep>
+                <description>
+                    <section>
+                        <para>
+                            The "R" programming environment
+                            is used to convert source NPP data
+                            to the same unit type used in the
+                            derived NPP global schema.
+                            TrendsEMLDocumentation 8 of 9
+                        </para>
+                    </section>
+                    <section>
+                        <para>
+                            "R" script goes here
+                        </para>
+                    </section>
+                </description>
+            </methodStep>
+        </methods>
+        <dataTable>
+            <entityName>Net Primary Productivity</entityName>
+            <attributeList>
+                <attribute>
+                    <attributeName>DT</attributeName>
+                    <attributeDefinition>
+                        Date and time stamp in UTC format
+                    </attributeDefinition>
+                    <measurementScale>
+                        <dateTime>
+                            <formatString>
+                                YYY-MM-DDThh:mm:ss
+                            </formatString>
+                        </dateTime>
+                    </measurementScale>
+                </attribute>
+                <attribute>
+                    <attributeName>NPP</attributeName>
+                    <attributeDefinition>
+                        Net Primary Productivity
+                    </attributeDefinition>
+                    <measurementScale>
+                        <ratio>
+                            <unit>
+                                <standardUnit>kilogramsPerMeterSquaredPerYear</standardUnit>
+                            </unit>
+                            <numericDomain>
+                                <numberType>real</numberType>
+                            </numericDomain>
+                        </ratio>
+                    </measurementScale>
+                </attribute>
+            </attributeList>
+        </dataTable>
+    </dataset>
+</eml:eml>

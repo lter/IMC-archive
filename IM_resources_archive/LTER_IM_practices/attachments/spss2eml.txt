@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    '$RCSfile: spss2eml.xsl,v $'
+    '$Author: corinna $'
+    '$Date: 2009/08/05 00:06:48 $'
+    '$Revision: 1.3 $'
+    
+    
+    Copyright: 2009 Arizona State University
+    
+    This material is based upon work supported by the National Science Foundation 
+    under Grant No. 9983132 and 0219310. Any opinions, findings and conclusions or recommendation 
+    expressed in this material are those of the author(s) and do not necessarily 
+    reflect the views of the National Science Foundation (NSF).  
+    
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+-->
+
+<!-- This stylesheet will convert SPSS metadata into the attribute list in EML style.
+    
+    <h3>Steps for creating metadata for an SPSS file (SPSS v.17, 2009-08-05):</h3>
+    
+    open file in SPSS (or better PASW as it is called now)
+    
+    <h3>setting up the output:</h3>
+    <ul>
+    <li>go to Utilities - OMS control panel</li>
+    <li>in the lower panes of the panel click on 'Tables' under 'Output Types'</li>
+    <li>on 'Codebook' under 'Command Identifiers'</li>
+    <li>on 'Variable Information' under 'Table Subtypes for Selected Commands</li>
+    
+    <li>click the radio button for 'File' under 'Output Destination'</li>
+    <li>click on the button 'Options' (above the Output Destination)</li>
+    <li>in the Options window click the radio button for 'All dimensions in a single row'
+    'Output XML' in the pulldown on the top is default</li>
+    <li>click 'Continue'</li>
+    <li>click 'Browse' next to the File textbox (below the option button again)</li>
+    <li>find the folder to save the file and give it a name</li>
+    <li>click the 'Add' button above the options button</li>
+    <li>click 'ok' and 'ok' again in the confirmation window.</li>
+    </ul>
+    <br/>
+    The PASW Statistics Viewer opens with this script:<br/>
+    OMS<br/>
+    /SELECT TABLES<br/>
+    /IF COMMANDS=['Codebook'] SUBTYPES=['Variable Information']<br/>
+    /DESTINATION FORMAT=OXML IMAGES=NO<br/>
+    OUTFILE='C:\path\to\file.xml'<br/>
+    /COLUMNS SEQUENCE=[RALL CALL LALL].<br/>
+    <br/>
+    <h3>Defining what to output:</h3>
+    <ul>
+    <li>In the PASW Statistics Viewer go to Analyze - Report - Codebook</li>
+    <li>in the Codebook output window move all variables from the left to the right side</li>
+    <li>click on the output tab and if desiered unclick some of the options (i.e. position and missing value and not necessary in EML)</li>
+    <li>click on the statistics tab and unclick all statistics output</li>
+    <li>click 'ok'</li>
+    <li>now the codebook appears in the PASW Statistics Viewer with all variables on the left side. Make sure they all have an open book icon to be exported.</li>
+    <li>In the main window is a nicely formatted codebook with all information for each variable.</li>
+    </ul>
+    
+    <h3>Starting the actual output:</h3>
+    <ul>
+    <li>In the PASW Statistics Viewer go back to Utilities - OMS control panel</li>
+    <li>higlight the Request and click on the 'End' button.</li>
+    <li>click 'ok' and 'ok' again in the confirmation window.</li>
+    </ul>
+    
+    The XML file should now be in the specified location.
+    
+-->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="xml" indent="yes"/>
+    <xsl:template match="/">
+                    <!-- attribute list actaully comes from the SPSS codebook output -->
+                    <attributeList>
+                        <xsl:for-each select="ns1:outputTree/ns1:command/ns1:pivotTable"
+                            xmlns:ns1="http://xml.spss.com/spss/oms">
+                            <xsl:element name="attribute">
+                                <xsl:attribute name="id">
+                                    <xsl:value-of select="@text"/>
+                                </xsl:attribute>
+                                <xsl:element name="attributeName">
+                                    <xsl:value-of select="@text"/>
+                                </xsl:element>
+                                <xsl:element name="attributeDefinition">
+                                    <xsl:value-of
+                                        select="ns1:dimension/ns1:group[@text='Standard Attributes']/ns1:category[@text='Label']/ns1:dimension/ns1:category/ns1:cell/@text"
+                                    />
+                                </xsl:element>
+                                <xsl:element name="storageType">
+                                    <xsl:attribute name="typeSystem"
+                                        >http://www.w3.org/2001/XMLSchema-datatypes</xsl:attribute>
+                                    <xsl:choose>
+                                        <xsl:when
+                                            test="ns1:dimension/ns1:group[@text='Standard Attributes']/ns1:category[@text='Type']/ns1:dimension/ns1:category/ns1:cell[@text='Numeric']"
+                                            >float</xsl:when>
+                                        <xsl:otherwise>string</xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:element>
+                                <xsl:element name="measurementScale">
+                                    <xsl:choose>
+                                        <xsl:when
+                                            test="ns1:dimension/ns1:group[@text='Standard Attributes']/ns1:category[@text='Measurement']/ns1:dimension/ns1:category/ns1:cell[@text='Scale']">
+                                            <xsl:call-template name="ratio"/>
+                                        </xsl:when>
+                                        <xsl:when
+                                            test="ns1:dimension/ns1:group[@text='Standard Attributes']/ns1:category[@text='Measurement']/ns1:dimension/ns1:category/ns1:cell[@text='Nominal']">
+                                            <nominal>
+                                                <xsl:call-template name="nonNumeric"/>
+                                            </nominal>
+                                        </xsl:when>
+                                        <xsl:when
+                                            test="ns1:dimension/ns1:group[@text='Standard Attributes']/ns1:category[@text='Measurement']/ns1:dimension/ns1:category/ns1:cell[@text='Ordinal']">
+                                            <ordinal>
+                                                <xsl:call-template name="nonNumeric"/>
+                                            </ordinal>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:element>
+                            </xsl:element>
+                        </xsl:for-each>
+                    </attributeList>
+    </xsl:template>
+
+    <!--template for scale type variables data, however, sometimes this is not defined properly and they should be numeric-->
+    <xsl:template name="ratio">
+        <xsl:choose>
+            <xsl:when test="ns1:dimension/ns1:group[@text='Labeled Values']"
+                xmlns:ns1="http://xml.spss.com/spss/oms">
+                <nominal>
+                    <xsl:call-template name="nonNumeric"/>
+                </nominal>
+            </xsl:when>
+            <xsl:otherwise>
+                <ratio>
+                    <unit>
+                        <standardUnit>dimensionless</standardUnit>
+                    </unit>
+                    <precision>1</precision>
+                    <numericDomain>
+                        <numberType>real</numberType>
+                    </numericDomain>
+                </ratio>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <!--template for nonNumeric (ordinal and nominal) variable types. First see if there is a code definition-->
+    <xsl:template name="nonNumeric">
+        <nonNumericDomain>
+            <xsl:choose>
+                <xsl:when test="ns1:dimension/ns1:group[@text='Labeled Values' or @text='Valid Values']"
+                    xmlns:ns1="http://xml.spss.com/spss/oms">
+                    <enumeratedDomain>
+                        <xsl:for-each
+                            select="ns1:dimension/ns1:group[@text='Labeled Values' or @text='Valid Values']/ns1:category">
+                            <xsl:element name="codeDefinition">
+                                <xsl:element name="code">
+                                    <xsl:value-of select="@text"/>
+                                </xsl:element>
+                                <xsl:element name="definition">
+                                    <xsl:value-of select="@label"/>
+                                </xsl:element>
+                            </xsl:element>
+                        </xsl:for-each>
+                    </enumeratedDomain>
+                </xsl:when>
+                <xsl:otherwise>
+                    <textDomain>
+                        <definition>
+                            <xsl:value-of
+                                select="ns1:dimension/ns1:group[@text='Standard Attributes']/ns1:category[@text='Label']/ns1:dimension/ns1:category/ns1:cell/@text"
+                                xmlns:ns1="http://xml.spss.com/spss/oms"/>
+                        </definition>
+                    </textDomain>
+                </xsl:otherwise>
+            </xsl:choose>
+        </nonNumericDomain>
+    </xsl:template>
+</xsl:stylesheet>

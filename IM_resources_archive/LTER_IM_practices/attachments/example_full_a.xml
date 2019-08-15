@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:ds="eml://ecoinformatics.org/dataset-2.1.0"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="eml://ecoinformatics.org/eml-2.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1"
+	xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.0 http://nis.lternet.edu/schemas/EML/eml-2.1.0/eml.xsd"
+	packageId="knb-lter-fls.21.3" system="FLS" scope="system">
+	<access authSystem="knb" order="allowFirst" scope="document">
+		<allow>
+			<principal>uid=FLS,o=lter,dc=ecoinformatics,dc=org</principal>
+			<permission>all</permission>
+		</allow>
+		<allow>
+			<principal>public</principal>
+			<permission>read</permission>
+		</allow>
+	</access>
+	<dataset id="FLS-1" system="FLS" scope="system">
+		<alternateIdentifier>FLS-1</alternateIdentifier>
+		<shortName>Arthropods</shortName>
+		<title>Longterm Ground Arthropod Monitoring Dataset at Ficity, USA from 1998 to 2003</title>
+		<creator id="org-1" system="FLS" scope="system">
+			<organizationName>Fictitious LTER Site</organizationName>
+			<address>
+<deliveryPoint>Department for Ecology</deliveryPoint>
+<deliveryPoint>Fictitious State University</deliveryPoint>
+<deliveryPoint>PO Box 111111</deliveryPoint>
+<city>Ficity</city>
+<administrativeArea>FI</administrativeArea>
+<postalCode>11111-1111</postalCode>
+</address>
+			<phone phonetype="voice">(999) 999-9999</phone>
+			<electronicMailAddress>fsu.contact@fi.univ.edu</electronicMailAddress>
+			<onlineUrl>http://www.fsu.edu/</onlineUrl>
+		</creator>
+		<creator id="pos-1" system="FLS" scope="system">
+			<positionName>FLS Lead PI</positionName>
+			<address>
+<deliveryPoint>Department for Ecology</deliveryPoint>
+<deliveryPoint>Fictitious State University</deliveryPoint>
+<deliveryPoint>PO Box 111111</deliveryPoint>
+<city>Ficity</city>
+<administrativeArea>FI</administrativeArea>
+<postalCode>11111-1111</postalCode>
+</address>
+			<phone phonetype="voice">(999) 999-9999</phone>
+			<electronicMailAddress>fsu.leadPI@fi.univ.edu</electronicMailAddress>
+			<onlineUrl>http://www.fsu.edu/</onlineUrl>
+		</creator>
+		<creator id="pers-1" system="FLS" scope="system">
+			<individualName>
+				<salutation>Dr.</salutation>
+				<givenName>Joe</givenName>
+				<givenName>T.</givenName>
+				<surName>Ecologist Jr.</surName>
+			</individualName>
+			<organizationName>FSL LTER</organizationName>
+			<address>
+<deliveryPoint>Department for Ecology</deliveryPoint>
+<deliveryPoint>Fictitious State University</deliveryPoint>
+<deliveryPoint>PO Box 111111</deliveryPoint>
+<city>Ficity</city>
+<administrativeArea>FI</administrativeArea>
+<postalCode>11111-1111</postalCode>
+</address>
+			<phone phonetype="voice">(999) 999-9999</phone>
+			<electronicMailAddress>jecologist@fi.univ.edu</electronicMailAddress>
+			<onlineUrl>http://www.fsu.edu/~jecologist</onlineUrl>
+		</creator>
+		<metadataProvider>
+			<organizationName>Fictitious LTER Site</organizationName>
+			<address>
+<deliveryPoint>Department for Ecology</deliveryPoint>
+<deliveryPoint>Fictitious State University</deliveryPoint>
+<deliveryPoint>PO Box 111111</deliveryPoint>
+<city>Ficity</city>
+<administrativeArea>FI</administrativeArea>
+<postalCode>11111-1111</postalCode>
+</address>
+			<phone phonetype="voice">(999) 999-9999</phone>
+			<electronicMailAddress>fsu@fi.univ.edu</electronicMailAddress>
+			<onlineUrl>http://www.fsu.edu/</onlineUrl>
+		</metadataProvider>
+		<associatedParty id="pers-2" system="FLS" scope="system">
+			<individualName>
+				<givenName>Ima</givenName>
+				<surName>Testuser</surName>
+			</individualName>
+			<organizationName>FSL LTER</organizationName>
+			<address>
+<deliveryPoint>Department for Ecology</deliveryPoint>
+<deliveryPoint>Fictitious State University</deliveryPoint>
+<deliveryPoint>PO Box 111111</deliveryPoint>
+<city>Ficity</city>
+<administrativeArea>FI</administrativeArea>
+<postalCode>11111-1111</postalCode>
+</address>
+			<phone phonetype="voice">(999) 999-9999</phone>
+			<electronicMailAddress>itestuser@lternet.edu</electronicMailAddress>
+			<onlineUrl>http://search.lternet.edu/directory_view.php?personid=12010&amp;query=itestuser</onlineUrl>
+			<role>Technician</role>
+		</associatedParty>
+		<pubDate>2000</pubDate>
+		<abstract>
+			<para>Ground arthropods communities are monitored in different habitats in a rapidly changing
+				environment. The arthropods are collected in traps four times a year in ten locations and
+				determined as far as possible to family, genus or species.</para>
+		</abstract>
+		<keywordSet>
+			<keyword keywordType="place">City</keyword>
+			<keyword keywordType="place">State</keyword>
+			<keyword keywordType="place">Region</keyword>
+			<keyword keywordType="place">County</keyword>
+			<keyword keywordType="theme">FLS</keyword>
+			<keyword keywordType="theme">Fictitious LTER Site</keyword>
+			<keyword keywordType="theme">LTER</keyword>
+			<keyword keywordType="theme">Arthropods</keyword>
+			<keyword keywordType="theme">Richness</keyword>
+			<keywordThesaurus>FLS site thesaurus</keywordThesaurus>
+		</keywordSet>
+		<keywordSet>
+			<keyword keywordType="theme">ecology</keyword>
+			<keyword keywordType="theme">biodiversity</keyword>
+			<keyword keywordType="theme">population dynamics</keyword>
+			<keyword keywordType="theme">terrestrial</keyword>
+			<keyword keywordType="theme">arthropods</keyword>
+			<keyword keywordType="theme">pitfall trap</keyword>
+			<keyword keywordType="theme">monitoring</keyword>
+			<keyword keywordType="theme">abundance</keyword>
+			<keywordThesaurus>LTER controlled vocabulary</keywordThesaurus>
+		</keywordSet>
+		<keywordSet>
+			<keyword keywordType="theme">populations</keyword>
+			<keywordThesaurus>LTER core research areas</keywordThesaurus>
+		</keywordSet>
+		<intellectualRights>
+			<section>
+				<title>Copyright Notice</title>
+				<para>Copyright Board of Regents, Fictitious State University. This dataset is released to
+					the public and may be used for academic, educational, or commercial purposes subject to
+					the following restrictions:</para>
+				<para>
+					<itemizedlist>
+						<listitem>
+							<para>While FLS LTER will make every effort possible to control and document the
+								quality of the data it publishes, the data are made available "as is".</para>
+						</listitem>
+						<listitem>
+							<para>FLS LTER cannot assume responsibility for damages resulting from mis-use or
+								mis-interpretation of datasets or from errors or omissions that may exist in the
+								data.</para>
+						</listitem>
+						<listitem>
+							<para>It is considered a matter of professional ethics to acknowledge the work of
+								other scientists that has resulted in data used in subsequent research.</para>
+						</listitem>
+						<listitem>
+							<para>FLS LTER expects that any use of data from this server will be accompanied with
+								the appropriate citations and acknowledgments.</para>
+						</listitem>
+						<listitem>
+							<para>FLS LTER encourages users to contact the original investigator responsible for
+								the data that they are accessing. Where appropriate, researchers whose projects are
+								integrally dependent on FLS LTER data are encouraged to consider collaboration
+								and/or co-authorship with original investigators.</para>
+						</listitem>
+						<listitem>
+							<para>FLS LTER requests that users submit to FLS LTER one copy of any publication
+								resulting from the use of data obtained from this site.</para>
+						</listitem>
+						<listitem>
+							<para>FLS LTER requests that users not redistribute data obtained from this site.
+								However, links or references to this site may be freely posted.</para>
+						</listitem>
+					</itemizedlist>
+				</para>
+			</section>
+		</intellectualRights>
+		<distribution>
+			<online>
+				<onlineDescription>f1s-1 Data Web Page</onlineDescription>
+				<url function="information">http://www.fsu.edu/lter/data/fls-1.htm</url>
+			</online>
+		</distribution>
+		<coverage>
+			<geographicCoverage>
+				<geographicDescription>Ficity, FI metropolitan area, USA</geographicDescription>
+				<boundingCoordinates>
+					<westBoundingCoordinate>-112.373614</westBoundingCoordinate>
+					<eastBoundingCoordinate>-111.612936</eastBoundingCoordinate>
+					<northBoundingCoordinate>33.708829</northBoundingCoordinate>
+					<southBoundingCoordinate>33.298975</southBoundingCoordinate>
+					<boundingAltitudes>
+						<altitudeMinimum>300</altitudeMinimum>
+						<altitudeMaximum>600</altitudeMaximum>
+						<altitudeUnits>meter</altitudeUnits>
+					</boundingAltitudes>
+				</boundingCoordinates>
+			</geographicCoverage>
+			<temporalCoverage>
+				<rangeOfDates>
+					<beginDate>
+						<calendarDate>1998-11-12</calendarDate>
+					</beginDate>
+					<endDate>
+						<calendarDate>2003-12-31</calendarDate>
+					</endDate>
+				</rangeOfDates>
+			</temporalCoverage>
+			<taxonomicCoverage>
+				<taxonomicSystem>
+					<classificationSystem>
+						<classificationSystemCitation>
+							<title>Integrated Taxonomic Information System (ITIS)</title>
+							<creator>
+								<organizationName>Integrated Taxonomic Information System</organizationName>
+								<onlineUrl>http://www.itis.gov/</onlineUrl>
+							</creator>
+							<generic>
+								<publisher>
+									<organizationName>Integrated Taxonomic Information System</organizationName>
+									<onlineUrl>http://www.itis.gov/</onlineUrl>
+								</publisher>
+							</generic>
+						</classificationSystemCitation>
+					</classificationSystem>
+					<identifierName>
+						<references>pers-1</references>
+					</identifierName>
+					<taxonomicProcedures>All individuals where identified and stored in alcohol, except for
+                                                one voucher specimen for each species which was tagged and pinned.</taxonomicProcedures>
+				</taxonomicSystem>
+				<generalTaxonomicCoverage>Orthopteran insects (grasshoppers) were identified to
+                                        species</generalTaxonomicCoverage>
+				<taxonomicClassification>
+					<taxonRankName>Kingdom</taxonRankName>
+					<taxonRankValue>Animalia</taxonRankValue>
+					<taxonomicClassification>
+						<taxonRankName>Phylum</taxonRankName>
+						<taxonRankValue>Arthropoda</taxonRankValue>
+						<taxonomicClassification>
+							<taxonRankName>Class</taxonRankName>
+							<taxonRankValue>Insecta</taxonRankValue>
+							<taxonomicClassification>
+								<taxonRankName>Order</taxonRankName>
+								<taxonRankValue>Orthoptera</taxonRankValue>
+								<taxonomicClassification>
+									<taxonRankName>Family</taxonRankName>
+									<taxonRankValue>Acrididae</taxonRankValue>
+									<taxonomicClassification>
+										<taxonRankName>Genus</taxonRankName>
+										<taxonRankValue>Mermiria</taxonRankValue>
+										<taxonomicClassification>
+											<taxonRankName>Species</taxonRankName>
+											<taxonRankValue>Mermiria intertexta</taxonRankValue>
+										</taxonomicClassification>
+									</taxonomicClassification>
+								</taxonomicClassification>
+							</taxonomicClassification>
+						</taxonomicClassification>
+					</taxonomicClassification>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>Kingdom</taxonRankName>
+					<taxonRankValue>Animalia</taxonRankValue>
+					<taxonomicClassification>
+						<taxonRankName>Phylum</taxonRankName>
+						<taxonRankValue>Arthropoda</taxonRankValue>
+						<taxonomicClassification>
+							<taxonRankName>Class</taxonRankName>
+							<taxonRankValue>Insecta</taxonRankValue>
+							<taxonomicClassification>
+								<taxonRankName>Order</taxonRankName>
+								<taxonRankValue>Orthoptera</taxonRankValue>
+								<taxonomicClassification>
+									<taxonRankName>Family</taxonRankName>
+									<taxonRankValue>Tettigoniidae</taxonRankValue>
+									<taxonomicClassification>
+										<taxonRankName>Genus</taxonRankName>
+										<taxonRankValue>Orchelimum</taxonRankValue>
+										<taxonomicClassification>
+											<taxonRankName>Species</taxonRankName>
+											<taxonRankValue>Orchelimum fidicinum</taxonRankValue>
+											<commonName>Salt Marsh Grasshopper</commonName>
+										</taxonomicClassification>
+									</taxonomicClassification>
+								</taxonomicClassification>
+							</taxonomicClassification>
+						</taxonomicClassification>
+					</taxonomicClassification>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>Kingdom</taxonRankName>
+					<taxonRankValue>Animalia</taxonRankValue>
+					<taxonomicClassification>
+						<taxonRankName>Phylum</taxonRankName>
+						<taxonRankValue>Arthropoda</taxonRankValue>
+						<taxonomicClassification>
+							<taxonRankName>Class</taxonRankName>
+							<taxonRankValue>Insecta</taxonRankValue>
+							<taxonomicClassification>
+								<taxonRankName>Order</taxonRankName>
+								<taxonRankValue>Orthoptera</taxonRankValue>
+								<taxonomicClassification>
+									<taxonRankName>Family</taxonRankName>
+									<taxonRankValue>Acrididae</taxonRankValue>
+									<taxonomicClassification>
+										<taxonRankName>Genus</taxonRankName>
+										<taxonRankValue>Orphulella</taxonRankValue>
+										<taxonomicClassification>
+											<taxonRankName>Species</taxonRankName>
+											<taxonRankValue>Orphulella pelidna</taxonRankValue>
+										</taxonomicClassification>
+									</taxonomicClassification>
+								</taxonomicClassification>
+							</taxonomicClassification>
+						</taxonomicClassification>
+					</taxonomicClassification>
+				</taxonomicClassification>
+			</taxonomicCoverage>
+		</coverage>
+		<maintenance>
+			<description>
+				<para>There have been no changes to the metadata or data files since publication online.
+				</para>
+			</description>
+		</maintenance>
+		<contact id="pos-4">
+			<positionName>Data Manager</positionName>
+			<address>
+<deliveryPoint>Department for Ecology</deliveryPoint>
+<deliveryPoint>Fictitious State University</deliveryPoint>
+<deliveryPoint>PO Box 111111</deliveryPoint>
+<city>Ficity</city>
+<administrativeArea>FI</administrativeArea>
+<postalCode>11111-1111</postalCode>
+</address>
+			<phone phonetype="voice">(111) 222-3333</phone>
+			<phone phonetype="fax">(111) 222-3334</phone>
+			<electronicMailAddress>fls.data@fi.univ.edu</electronicMailAddress>
+			<onlineUrl>http://www.fsu.edu/lter</onlineUrl>
+		</contact>
+		<publisher>
+			<references>org-1</references>
+		</publisher>
+		<methods>
+			<methodStep>
+				<description>
+					<section>
+						<title>Pitfall trap sampling for ground arthropod biodiversity monitoring</title>
+						<para>Supplies used: pitfall traps (P-16 plastic Solo cups with lids) metal spades and
+							large bulb planters (to dig holes in which to put traps) 70% ethanol (to preserve
+							specimens) Qorpak glass jars with lids from the VWR Corporation, 120ml (4oz), cap size
+							58-400 (comes included), Qorpak no. 7743C, VWR catalog no. 16195-703.</para>
+						<para>Between 10 and 21 traps are placed at each site in siutable location.</para>
+						<para>All trapped taxa counted and measured (body length), most taxa identified to
+							Family, ants to Genus</para>
+					</section>
+				</description>
+				<instrumentation>SBE MicroCAT 37-SM (S/N 1790); manufacturer: Sea-Bird Electronics (model:
+                                        37-SM MicroCAT); parameter: Conductivity (accuracy: 0.0003 S/m, readability: 0.00001 S/m,
+                                        range: 0 to 7 S/m); last calibration: Feb 28, 2001</instrumentation>
+				<instrumentation>SBE MicroCAT 37-SM (S/N 1790); manufacturer: Sea-Bird Electronics (model:
+                                        37-SM MicroCAT); parameter: Pressure (water) (accuracy: 0.2m, readability: 0.0004m, range:
+                                        0 to 20m); last calibration: Feb 28, 2001</instrumentation>
+				<instrumentation>SBE MicroCAT 37-SM (S/N 1790); manufacturer: Sea-Bird Electronics (model:
+                                        37-SM MicroCAT); parameter: Temperature (water) (accuracy: 0.002°C, readability: 0.0001°C,
+                                        range: -5 to 35°C); last calibration: Feb 28, 2001</instrumentation>
+			</methodStep>
+			<sampling>
+				<studyExtent>
+					<description>
+						<para>Arthropod pit fall traps are placed in three different locations four times a
+							year</para>
+					</description>
+				</studyExtent>
+				<samplingDescription>
+					<para>Six traps were set in a transect at each location.</para>
+				</samplingDescription>
+				<spatialSamplingUnits>
+					<coverage>
+						<geographicDescription>site number 1</geographicDescription>
+						<boundingCoordinates>
+							<westBoundingCoordinate>-112.234566</westBoundingCoordinate>
+							<eastBoundingCoordinate>-112.234566</eastBoundingCoordinate>
+							<northBoundingCoordinate>33.534566</northBoundingCoordinate>
+							<southBoundingCoordinate>33.534566</southBoundingCoordinate>
+						</boundingCoordinates>
+					</coverage>
+					<coverage>
+						<geographicDescription>site number 2</geographicDescription>
+						<boundingCoordinates>
+							<westBoundingCoordinate>-111.745677</westBoundingCoordinate>
+							<eastBoundingCoordinate>-111.745677</eastBoundingCoordinate>
+							<northBoundingCoordinate>33.64577</northBoundingCoordinate>
+							<southBoundingCoordinate>33.64577</southBoundingCoordinate>
+						</boundingCoordinates>
+					</coverage>
+					<coverage>
+						<geographicDescription>site number 3</geographicDescription>
+						<boundingCoordinates>
+							<westBoundingCoordinate>-112.167899</westBoundingCoordinate>
+							<eastBoundingCoordinate>-112.16799</eastBoundingCoordinate>
+							<northBoundingCoordinate>33.76799</northBoundingCoordinate>
+							<southBoundingCoordinate>33.76799</southBoundingCoordinate>
+						</boundingCoordinates>
+					</coverage>
+				</spatialSamplingUnits>
+			</sampling>
+			<qualityControl>
+				<description>
+					<para>All specimens are archived for future reference. Quality control during data entry
+						is achieved with standard database techniques of pulldowns that prevent typos and
+						constraints. Scientists inspect standard data summary statistics after data
+						entry.</para>
+				</description>
+			</qualityControl>
+		</methods>
+		<project>
+			<title>FSL basic monitoring program</title>
+			<personnel id="pers-30" system="FLS">
+				<individualName>
+					<salutation>Dr.</salutation>
+					<givenName>Eva</givenName>
+					<givenName>M.</givenName>
+					<surName>Scientist</surName>
+				</individualName>
+				<address>
+<deliveryPoint>Department of Ecology</deliveryPoint>
+<deliveryPoint>Fictitious State University</deliveryPoint>
+<deliveryPoint>PO Box 111111</deliveryPoint>
+<city>Ficity</city>
+<administrativeArea>FI</administrativeArea>
+<postalCode>11111-1111</postalCode>
+</address>
+				<role>principalInvestigator</role>
+			</personnel>
+			<personnel id="pers-130" system="FLS">
+				<individualName>
+					<givenName>Monica</givenName>
+					<givenName>D.</givenName>
+					<surName>Techy</surName>
+				</individualName>
+				<address>
+<deliveryPoint>Department for Ecology</deliveryPoint>
+<deliveryPoint>Fictitious State University</deliveryPoint>
+<deliveryPoint>PO Box 111111</deliveryPoint>
+<city>Ficity</city>
+<administrativeArea>FI</administrativeArea>
+<postalCode>11111-1111</postalCode>
+</address>
+				<role>principalInvestigator</role>
+			</personnel>
+			<abstract>
+				<para>The FLS basic monitoring program consists of monitoring of arthropod populations,
+					plant net primary productivity, and bird populations. Monitoring takes place at 3
+					locations, 4 times a year. Climate parameters a continuously measured at all
+					stations.</para>
+			</abstract>
+			<funding>
+				<para>National Science Foundation under Grant No. DEB 9999999, Ficticous Long-Term
+					Ecological Research (FLS LTER)</para>
+			</funding>
+		</project>
+		<dataTable>
+			<entityName>invertebrates</entityName>
+			<entityDescription>invertebrate collection data</entityDescription>
+			<physical>
+				<objectName>FLS-1.csv</objectName>
+				<size unit="rows">130</size>
+				<characterEncoding>ASCII</characterEncoding>
+				<dataFormat>
+					<textFormat>
+						<numHeaderLines>1</numHeaderLines>
+						<numFooterLines>0</numFooterLines>
+						<recordDelimiter>\r</recordDelimiter>
+						<numPhysicalLinesPerRecord>1</numPhysicalLinesPerRecord>
+						<attributeOrientation>column</attributeOrientation>
+						<simpleDelimited>
+							<fieldDelimiter>,</fieldDelimiter>
+						</simpleDelimited>
+					</textFormat>
+				</dataFormat>
+				<distribution>
+					<online>
+						<onlineDescription>fls-1 Data File</onlineDescription>
+						<url function="download">http://www.fsu.edu/lter/data/fls-1.csv</url>
+					</online>
+					<access authSystem="knb" order="denyFirst" scope="document">
+						<allow>
+							<principal>uid=FLS,o=lter,dc=ecoinformatics,dc=org</principal>
+							<permission>all</permission>
+						</allow>
+						<deny>
+							<principal>public</principal>
+							<permission>all</permission>
+						</deny>
+					</access>
+				</distribution>
+			</physical>
+			<additionalInfo>
+				<para>Data Anomalies: Site 2, zone 1, plot 7 substitutes for plot 6; Site 7, zone 2, plot 2
+					substitutes for plot 3; Site 8, zone 1, plots 2 and 7 substitute for plots 3 and 6; Site
+					9, zone 2, plot 7 substitutes for plot 6.</para>
+			</additionalInfo>
+			<attributeList>
+				<attribute id="att.1">
+					<attributeName>Site</attributeName>
+					<attributeDefinition>FLS-LTER sampling site</attributeDefinition>
+					<storageType>integer</storageType>
+					<measurementScale>
+						<ordinal>
+							<nonNumericDomain>
+								<enumeratedDomain>
+									<codeDefinition>
+										<code>1</code>
+										<definition>FLS study site 1</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>2</code>
+										<definition>FLS study site 2</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>3</code>
+										<definition>FLS study site 3</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>4</code>
+										<definition>FLS study site 4</definition>
+									</codeDefinition>
+								</enumeratedDomain>
+							</nonNumericDomain>
+						</ordinal>
+					</measurementScale>
+				</attribute>
+				<attribute id="att.2">
+					<attributeName>Year</attributeName>
+					<attributeDefinition>Calendar year of the observation from years 1990 -
+                                                2010</attributeDefinition>
+					<storageType>integer</storageType>
+					<measurementScale>
+						<dateTime>
+							<formatString>YYYY</formatString>
+							<dateTimePrecision>1</dateTimePrecision>
+							<dateTimeDomain>
+								<bounds>
+									<minimum exclusive="false">1993</minimum>
+									<maximum exclusive="false">2003</maximum>
+								</bounds>
+							</dateTimeDomain>
+						</dateTime>
+					</measurementScale>
+				</attribute>
+				<attribute id="att.3">
+					<attributeName>Month</attributeName>
+					<attributeDefinition>Calendar month of the observation</attributeDefinition>
+					<storageType>integer</storageType>
+					<measurementScale>
+						<dateTime>
+							<formatString>MM</formatString>
+							<dateTimePrecision>1</dateTimePrecision>
+							<dateTimeDomain>
+								<bounds>
+									<minimum exclusive="false">1</minimum>
+									<maximum exclusive="false">12</maximum>
+								</bounds>
+							</dateTimeDomain>
+						</dateTime>
+					</measurementScale>
+				</attribute>
+				<attribute id="att.4">
+					<attributeName>Day</attributeName>
+					<attributeDefinition>Calendar day of the observation</attributeDefinition>
+					<storageType>integer</storageType>
+					<measurementScale>
+						<dateTime>
+							<formatString>DD</formatString>
+							<dateTimePrecision>1</dateTimePrecision>
+							<dateTimeDomain>
+								<bounds>
+									<minimum exclusive="false">1</minimum>
+									<maximum exclusive="false">31</maximum>
+								</bounds>
+							</dateTimeDomain>
+						</dateTime>
+					</measurementScale>
+				</attribute>
+				<attribute id="att.5">
+					<attributeName>Transect</attributeName>
+					<attributeDefinition>Transect number (randomly placed within the study
+                                                site)</attributeDefinition>
+					<storageType>integer</storageType>
+					<measurementScale>
+						<nominal>
+							<nonNumericDomain>
+								<textDomain>
+									<definition>Transect number (randomly placed)</definition>
+								</textDomain>
+							</nonNumericDomain>
+						</nominal>
+					</measurementScale>
+				</attribute>
+				<attribute id="att.6">
+					<attributeName>Species_Code</attributeName>
+					<attributeDefinition>Coded species name of the insect observed</attributeDefinition>
+					<storageType>string</storageType>
+					<measurementScale>
+						<nominal>
+							<nonNumericDomain>
+								<enumeratedDomain>
+									<codeDefinition>
+										<code>G0</code>
+										<definition>Other grasshoppers</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>G1</code>
+										<definition>Orchelimum spp.</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>G2</code>
+										<definition>Paroxya clavuliger</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>G3</code>
+										<definition>Orphulella pelidna</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>G4</code>
+										<definition>Mermiria intertexta</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>G5</code>
+										<definition>Schistocerca obscura</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>G6</code>
+										<definition>Romalea guttatus</definition>
+									</codeDefinition>
+								</enumeratedDomain>
+							</nonNumericDomain>
+						</nominal>
+					</measurementScale>
+				</attribute>
+				<attribute id="att.7">
+					<attributeName>Count</attributeName>
+					<attributeDefinition>Number of individuals observed</attributeDefinition>
+					<storageType>integer</storageType>
+					<measurementScale>
+						<interval>
+							<unit>
+								<standardUnit>number</standardUnit>
+							</unit>
+							<precision>1</precision>
+							<numericDomain>
+								<numberType>whole</numberType>
+								<bounds>
+									<minimum exclusive="false">0</minimum>
+								</bounds>
+							</numericDomain>
+						</interval>
+					</measurementScale>
+					<missingValueCode>
+						<code>NaN</code>
+						<codeExplanation>value not recorded or invalid</codeExplanation>
+					</missingValueCode>
+				</attribute>
+				<attribute id="att.8">
+					<attributeName>cond</attributeName>
+					<attributeLabel>Conductivity</attributeLabel>
+					<attributeDefinition>measured with SeaBird Elecronics CTD-911</attributeDefinition>
+					<storageType>float</storageType>
+					<measurementScale>
+						<ratio>
+							<unit>
+								<customUnit>siemensPerMeter</customUnit>
+							</unit>
+							<precision>0.0001</precision>
+							<numericDomain>
+								<numberType>real</numberType>
+								<bounds>
+									<minimum exclusive="false">0</minimum>
+									<maximum exclusive="false">40</maximum>
+								</bounds>
+							</numericDomain>
+						</ratio>
+					</measurementScale>
+				</attribute>
+			</attributeList>
+			<constraint id="invertebrate_pk">
+				<primaryKey>
+					<constraintName>invertebrate_pk</constraintName>
+					<key>
+						<attributeReference>att.1</attributeReference>
+						<attributeReference>att.2</attributeReference>
+						<attributeReference>att.3</attributeReference>
+						<attributeReference>att.4</attributeReference>
+					</key>
+				</primaryKey>
+			</constraint>
+			<numberOfRecords>130</numberOfRecords>
+		</dataTable>
+		<spatialVector id="Landuse for Ficity in 1955">
+			<entityName>Landuse for Ficity in 1955</entityName>
+			<entityDescription>This GIS layer represents a reconstructed generalized landuse map for the area of current Ficity around the time period of 1955.</entityDescription>
+			<physical>
+				<objectName>fls-20.zip</objectName>
+				<dataFormat>
+					<externallyDefinedFormat>
+						<formatName>Shapefile</formatName>
+					</externallyDefinedFormat>
+				</dataFormat>
+				<distribution>
+					<online>
+						<onlineDescription>f1s-20 Zipped Shapefile File</onlineDescription>
+						<url function="download">http://www.fsu.edu/lter/data/fls-20.zip</url>
+					</online>
+				</distribution>
+			</physical>
+			<attributeList id="Landuse for Ficity in 1955.attributeList">
+				<attribute id="Landuse for Ficity in 1955.FID">
+					<attributeName>FID</attributeName>
+					<attributeDefinition>Internal feature number.</attributeDefinition>
+					<storageType typeSystem="http://www.esri.com/metadata/esriprof80.html">OID</storageType>
+					<measurementScale>
+						<nominal>
+							<nonNumericDomain>
+								<textDomain>
+									<definition>Sequential unique whole numbers that are automatically generated.</definition>
+								</textDomain>
+							</nonNumericDomain>
+						</nominal>
+					</measurementScale>
+				</attribute>
+				<attribute id="Landuse for Ficity in 1955.Shape">
+					<attributeName>Shape</attributeName>
+					<attributeDefinition>Feature geometry.</attributeDefinition>
+					<storageType typeSystem="http://www.esri.com/metadata/esriprof80.html">Geometry</storageType>
+					<measurementScale>
+						<nominal>
+							<nonNumericDomain>
+								<textDomain>
+									<definition>Coordinates defining the features.</definition>
+								</textDomain>
+							</nonNumericDomain>
+						</nominal>
+					</measurementScale>
+				</attribute>
+				<attribute id="Landuse for Ficity in 1955.Z955">
+					<attributeName>Z955</attributeName>
+					<attributeDefinition>This field signifies the landuse value for each polygon.</attributeDefinition>
+					<storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+					<measurementScale>
+						<nominal>
+							<nonNumericDomain>
+								<enumeratedDomain>
+									<codeDefinition>
+										<code>Agriculture</code>
+										<definition>Agricultural land use</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>Urban</code>
+										<definition>Urbanized area</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>Desert</code>
+										<definition>Unmodified area</definition>
+									</codeDefinition>
+									<codeDefinition>
+										<code>Recreation</code>
+										<definition>Recreational land use</definition>
+									</codeDefinition>
+								</enumeratedDomain>
+							</nonNumericDomain>
+						</nominal>
+					</measurementScale>
+				</attribute>
+			</attributeList>
+			<geometry>Polygon</geometry>
+			<geometricObjectCount>78</geometricObjectCount>
+			<spatialReference>
+				<horizCoordSysName>NAD_1927_UTM_Zone_12N</horizCoordSysName>
+			</spatialReference>
+		</spatialVector>
+		<spatialRaster id="fi_24k">
+			<entityName>fi_24k</entityName>
+			<entityDescription>Ficiticious State 7.5 Minute Digital Elevation Model</entityDescription>
+			<physical>
+				<objectName>fls-30.zip</objectName>
+				<dataFormat>
+					<externallyDefinedFormat>
+						<formatName>Esri Grid</formatName>
+					</externallyDefinedFormat>
+				</dataFormat>
+				<distribution>
+					<online>
+						<onlineDescription>f1s-30 zipped raster data File</onlineDescription>
+						<url function="download">http://www.fsu.edu/lter/data/fls-30.zip</url>
+					</online>
+				</distribution>
+			</physical>
+			<attributeList id="fi_24k.attributeList">
+				<attribute id="fi_24k.ObjectID">
+					<attributeName>ObjectID</attributeName>
+					<attributeDefinition>Internal feature number.</attributeDefinition>
+					<storageType typeSystem="http://www.esri.com/metadata/esriprof80.html">OID</storageType>
+					<measurementScale>
+						<nominal>
+							<nonNumericDomain>
+								<textDomain>
+									<definition>Sequential unique whole numbers that are automatically
+                                                                                generated.</definition>
+								</textDomain>
+							</nonNumericDomain>
+						</nominal>
+					</measurementScale>
+				</attribute>
+				<attribute id="fi_24k.Cell Value">
+					<attributeName>Cell Value</attributeName>
+					<attributeDefinition>Elevation Value</attributeDefinition>
+					<storageType typeSystem="http://www.esri.com/metadata/esriprof80.html">Integer</storageType>
+					<measurementScale>
+						<ratio>
+							<unit>
+								<standardUnit>meter</standardUnit>
+							</unit>
+							<precision>1</precision>
+							<numericDomain>
+								<numberType>integer</numberType>
+								<bounds>
+									<minimum exclusive="true">-5193</minimum>
+									<maximum exclusive="true">14785</maximum>
+								</bounds>
+							</numericDomain>
+						</ratio>
+					</measurementScale>
+				</attribute>
+				<attribute id="fi_24k.Count">
+					<attributeName>Count</attributeName>
+					<attributeDefinition>Count</attributeDefinition>
+					<storageType typeSystem="http://www.esri.com/metadata/esriprof80.html">Integer</storageType>
+					<measurementScale>
+						<ratio>
+							<unit>
+								<standardUnit>number</standardUnit>
+							</unit>
+							<precision>1</precision>
+							<numericDomain>
+								<numberType>whole</numberType>
+							</numericDomain>
+						</ratio>
+					</measurementScale>
+				</attribute>
+			</attributeList>
+			<spatialReference>
+				<horizCoordSysName>NAD_1927_UTM_Zone_12N</horizCoordSysName>
+			</spatialReference>
+			<horizontalAccuracy>
+				<accuracyReport>not available</accuracyReport>
+			</horizontalAccuracy>
+			<verticalAccuracy>
+				<accuracyReport>not available</accuracyReport>
+			</verticalAccuracy>
+			<cellSizeXDirection>30.0</cellSizeXDirection>
+			<cellSizeYDirection>30.0</cellSizeYDirection>
+			<numberOfBands>1</numberOfBands>
+			<rasterOrigin>Upper Left</rasterOrigin>
+			<rows>21092</rows>
+			<columns>18136</columns>
+			<verticals>1</verticals>
+			<cellGeometry>matrix</cellGeometry>
+		</spatialRaster>
+		<otherEntity>
+			<entityName>example-kmz</entityName>
+			<entityDescription>FLS-1 Research site locations</entityDescription>
+			<physical>
+				<objectName>fls-1.kmz</objectName>
+				<dataFormat>
+					<externallyDefinedFormat>
+						<formatName>KMZ</formatName>
+					</externallyDefinedFormat>
+				</dataFormat>
+				<distribution>
+					<online>
+						<url>http://www.fsu.edu/lter/maps/fsl-1.kmz</url>
+					</online>
+				</distribution>
+			</physical>
+			<entityType>KMZ</entityType>
+		</otherEntity>
+	</dataset>
+	<additionalMetadata>
+		<metadata>
+			<stmml:unitList>
+				<stmml:unit id="siemensPerMeter" name="siemensPerMeter" abbreviation="S/m"
+					unitType="conductance" parentSI="siemen" multiplierToSI="1" constantToSI="0">
+					<stmml:description>conductivity unit</stmml:description>
+				</stmml:unit>
+			</stmml:unitList>
+		</metadata>
+	</additionalMetadata>
+</eml:eml>

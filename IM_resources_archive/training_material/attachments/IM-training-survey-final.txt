@@ -1,0 +1,123 @@
+Q2 - Please select the technology areas where you feel more training would help you do your job (maximum of 4):,,,,,,,,,,,
+Answer,%,Count,,,,,,,,,
+Advanced DEIMS: Drupal development,22.22%,4,,,,,,,,,
+App development: mobile data collection applications,27.78%,5,,,,,,,,,
+Automating QA/QC: algorithims & other advanced techniques,38.89%,7,,,,,,,,,
+Database administration,16.67%,3,,,,,,,,,
+"DataONE: tools, best practices",22.22%,4,,,,,,,,,
+"EML: schema, stylesheets",22.22%,4,,,,,,,,,
+GCE Toolbox,22.22%,4,,,,,,,,,
+GIS and mapping,16.67%,3,,,,,,,,,
+Version control with Git & GitHub,5.56%,1,,,,,,,,,
+"Metabase: general application, generating EML",5.56%,1,,,,,,,,,
+PASTA+ API,55.56%,10,,,,,,,,,
+"R for data managers: data wrangling, generating EML",55.56%,10,,,,,,,,,
+Systems administration,16.67%,3,,,,,,,,,
+Web technologies,38.89%,7,,,,,,,,,
+Other (Please describe),0.00%,0,,,,,,,,,
+Total,100%,18,,,,,,,,,
+,,,,,,,,,,,
+"Q3 - In question Q2 you selected ""Automating QA/QC"". Please select how useful knowing more about each of these sub-topics would be for you:",,,,,,,,,,,
+Question,Extremely useful,,Very useful,,Moderately useful,,Slightly useful,,Not at all useful,,Total
+R,42.86%,3,42.86%,3,14.29%,1,0.00%,0,0.00%,0,7
+Python,14.29%,1,42.86%,3,28.57%,2,14.29%,1,0.00%,0,7
+SAS,0.00%,0,0.00%,0,33.33%,2,33.33%,2,33.33%,2,6
+SQL,33.33%,2,16.67%,1,16.67%,1,16.67%,1,16.67%,1,6
+,,,,,,,,,,,
+"Q4 - In question Q2 you selected ""Database administration"". Please identify the database topic(s) that interest you:",,,,,,,,,,,
+Answer,%,Count,,,,,,,,,
+Database design,33.33%,1,,,,,,,,,
+Geodatabases,0.00%,0,,,,,,,,,
+Backing up and restoring databases,33.33%,1,,,,,,,,,
+Database security,0.00%,0,,,,,,,,,
+Advanced database programming using Structured Query Language (SQL),100.00%,3,,,,,,,,,
+Total,100%,3,,,,,,,,,
+,,,,,,,,,,,
+"Q5 - You selected ""Database Design"". Please select how useful knowing more about each of these sub-topics would be for you:",,,,,,,,,,,
+Question,Extremely useful,,Very useful,,Moderately useful,,Slightly useful,,Not at all useful,,Total
+Oracle,0.00%,0,0.00%,0,0.00%,0,0.00%,0,100.00%,1,1
+SQLserver,100.00%,1,0.00%,0,0.00%,0,0.00%,0,0.00%,0,1
+MySQL,100.00%,1,0.00%,0,0.00%,0,0.00%,0,0.00%,0,1
+Postgres,0.00%,0,0.00%,0,0.00%,0,0.00%,0,100.00%,1,1
+,,,,,,,,,,,
+"Q6 - In question Q2 you selected ""GIS and Mapping"". Please identify the GIS topic(s) that interest you:",,,,,,,,,,,
+Answer,%,Count,,,,,,,,,
+ArcGIS or QGIS for mapping,66.67%,2,,,,,,,,,
+geodatabases,33.33%,1,,,,,,,,,
+web-based mapping,0.00%,0,,,,,,,,,
+Serving GIS Data:  Making it available to the community and the site scientists,33.33%,1,,,,,,,,,
+Total,100%,3,,,,,,,,,
+,,,,,,,,,,,
+"Q7 - You selected ""Web-based Mapping"". Please select how useful knowing more about each of these sub-topics would be for you:",,,,,,,,,,,
+Question,Extremely useful,,Very useful,,Moderately useful,,Slightly useful,,Not at all useful,,Total
+Google/KML,0.00%,0,0.00%,0,0.00%,0,0.00%,0,0.00%,0,0
+OpenLayers,0.00%,0,0.00%,0,0.00%,0,0.00%,0,0.00%,0,0
+Leaflet,0.00%,0,0.00%,0,0.00%,0,0.00%,0,0.00%,0,0
+ArcGIS online,0.00%,0,0.00%,0,0.00%,0,0.00%,0,0.00%,0,0
+,,,,,,,,,,,
+"Q8 - You selected ""Serving GIS data"". Please select how useful knowing more about each of these sub-topics would be for you:",,,,,,,,,,,
+Question,Extremely useful,,Very useful,,Moderately useful,,Slightly useful,,Not at all useful,,Total
+ArcGIS server,0.00%,0,100.00%,1,0.00%,0,0.00%,0,0.00%,0,1
+Geoserver,0.00%,0,0.00%,0,100.00%,1,0.00%,0,0.00%,0,1
+,,,,,,,,,,,
+"Q9 - In question Q2 you selected ""PASTA+ API"". Please identify the PASTA+ topic(s) that interest you:",,,,,,,,,,,
+Answer,%,Count,,,,,,,,,
+Stylesheets to translate XML to other forms or from one XML form to another,50.00%,5,,,,,,,,,
+"Provenance - Revision history, chain of custody, changes in structure",30.00%,3,,,,,,,,,
+Web services,80.00%,8,,,,,,,,,
+Total,100%,10,,,,,,,,,
+,,,,,,,,,,,
+"Q10 - You selected ""Web services"". Please select how useful knowing more about each of these sub-topics would be for you:",,,,,,,,,,,
+Question,Extremely useful,,Very useful,,Moderately useful,,Slightly useful,,Not at all useful,,Total
+Using CURL to interact with PASTA,37.50%,3,25.00%,2,12.50%,1,25.00%,2,0.00%,0,8
+"Using CURL inside scripting languages (e.g., Python)",50.00%,4,25.00%,2,12.50%,1,12.50%,1,0.00%,0,8
+Using XML libraries in scripting languages to parse and manipulate data from PASTA web services,50.00%,4,12.50%,1,25.00%,2,0.00%,0,12.50%,1,8
+,,,,,,,,,,,
+"Q11 - In question 1 you selected ""Systems Administration"". Please identify the administration topic(s) that interest you:",,,,,,,,,,,
+Answer,%,Count,,,,,,,,,
+LDAP - protocol to access data that is often used for login information,66.67%,2,,,,,,,,,
+Microsoft server,33.33%,1,,,,,,,,,
+Network security,66.67%,2,,,,,,,,,
+UNIX/Linux,100.00%,3,,,,,,,,,
+Total,100%,3,,,,,,,,,
+,,,,,,,,,,,
+"Q12 - In question Q2 you selected ""Web Technologies"". Please identify the web technology topic(s) that interest you:",,,,,,,,,,,
+Answer,%,Count,,,,,,,,,
+Stylesheets to translate XML to other forms or from one XML form to another,28.57%,2,,,,,,,,,
+Web application programming,71.43%,5,,,,,,,,,
+Content management systems (CMS),28.57%,2,,,,,,,,,
+Web security,57.14%,4,,,,,,,,,
+Web-based data visualization,85.71%,6,,,,,,,,,
+Total,100%,7,,,,,,,,,
+,,,,,,,,,,,
+"Q13 - You selected ""Web application programming"". Please select how useful knowing more about each of these sub-topics would be for you:",,,,,,,,,,,
+Question,Extremely useful,,Very useful,,Moderately useful,,Slightly useful,,Not at all useful,,Total
+Javascript,60.00%,3,0.00%,0,20.00%,1,20.00%,1,0.00%,0,5
+PHP,40.00%,2,20.00%,1,20.00%,1,20.00%,1,0.00%,0,5
+Ruby,25.00%,1,25.00%,1,25.00%,1,0.00%,0,25.00%,1,4
+,,,,,,,,,,,
+"Q14 - You selected ""Content Management Systems"". Please select how useful knowing more about each of these sub-topics would be for you:",,,,,,,,,,,
+Question,Extremely useful,,Very useful,,Moderately useful,,Slightly useful,,Not at all useful,,Total
+Drupal,50.00%,1,0.00%,0,0.00%,0,0.00%,0,50.00%,1,2
+Wordpress,50.00%,1,0.00%,0,50.00%,1,0.00%,0,0.00%,0,2
+,,,,,,,,,,,
+"Q15 - You selected ""Web-based data visualization"". Please select how useful knowing more about each of these sub-topics would be for you:",,,,,,,,,,,
+Question,Extremely useful,,Very useful,,Moderately useful,,Slightly useful,,Not at all useful,,Total
+Shiny,60.00%,3,40.00%,2,0.00%,0,0.00%,0,0.00%,0,5
+Google Charts,33.33%,2,33.33%,2,16.67%,1,16.67%,1,0.00%,0,6
+Chart.js,40.00%,2,40.00%,2,0.00%,0,20.00%,1,0.00%,0,5
+Plotly,50.00%,3,16.67%,1,16.67%,1,16.67%,1,0.00%,0,6
+dygraphs,66.67%,4,16.67%,1,16.67%,1,0.00%,0,0.00%,0,6
+,,,,,,,,,,,
+"Q16 - Thank you for your input. If you would be willing to discuss your training interests in more detail with someone from the IM Skillset and Training Resources Group, please provide your name and someone will follow up with you.",,,,,,,,,,,
+Name,,,,,,,,,,,
+Yang Xia,,,,,,,,,,,
+John Porter,,,,,,,,,,,
+Stevan Earl,,,,,,,,,,,
+Kristin,,,,,,,,,,,
+Corinna Gries,,,,,,,,,,,
+Gastil Buhl,,,,,,,,,,,
+Brian Herndon,,,,,,,,,,,
+Mary Martin,,,,,,,,,,,
+Ken Ramsey,,,,,,,,,,,
+Wade Sheldon,,,,,,,,,,,

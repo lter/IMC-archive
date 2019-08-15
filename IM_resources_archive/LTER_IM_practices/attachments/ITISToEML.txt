@@ -1,0 +1,37 @@
+<?xml version='1.0' ?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  
+  <!-- Have to match on local-name because ITIS returns are not properly namespaced -->
+  <xsl:template match='//*[local-name()="return"]'>
+    
+    <!-- Create the top-level taxonomicCoverage tag -->
+    <xsl:element name='taxonomicCoverage'>
+      <xsl:attribute name='id'>
+	<xsl:value-of select='*[local-name()="tsn"]'/>
+      </xsl:attribute>
+      <xsl:attribute name='system'>itis</xsl:attribute>
+      <xsl:attribute name='scope'>system</xsl:attribute>
+
+      <!-- For each ITIS rank, create a taxonomicClassification -->
+      <xsl:apply-templates select='*[local-name()="hierarchyList" and position()=1]' mode='createTC'/>
+
+    </xsl:element>
+   
+  </xsl:template>
+  
+  <!-- Template to create taxonomicClassifications recursively -->
+  <xsl:template match='//*[local-name()="hierarchyList"]' mode='createTC'>
+    <xsl:element name='taxonomicClassification'>
+      <xsl:element name='taxonRankName'>
+	<xsl:value-of select='*[local-name()="rankName"]'/>
+      </xsl:element>
+      <xsl:element name='taxonRankValue'>
+	<xsl:value-of select='*[local-name()="taxonName"]'/>
+      </xsl:element>
+
+      <xsl:apply-templates select='following-sibling::*[local-name()="hierarchyList" and position()=1]' mode='createTC'/>
+
+    </xsl:element>
+  </xsl:template>
+
+</xsl:stylesheet>

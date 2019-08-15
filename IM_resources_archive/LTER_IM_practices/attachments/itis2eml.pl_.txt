@@ -1,0 +1,28 @@
+##############################################
+##
+##  program itis2eml   Inigo San Gil
+##
+###############################################
+##
+##  use : perl itis2eml.pl taxonClassXmlfile > outputfile
+##
+## where taxonClassXmlfile is the taxonomic classification
+## expressed in FGDC, and outputfile is the output
+## file, the EML counterpart
+##
+use strict;
+my $file=$ARGV[0];
+my $nargin = $#ARGV + 1;
+
+if ($nargin < 1) {
+  printf("usage: perl itis2eml.pl taxonClassXmlfile > outputfile \n");
+  exit;
+}
+open(F,$ARGV[0]) or die "couldnt open file $ARGV[0], please make sure the file exists \n";
+undef $/;
+my $s=<F>;
+$s=~s/taxoncl>/taxonomicClassification>/g;
+$s=~s/taxonrn>/taxonRankName>/g;
+$s=~s/taxonrv>/taxonRankValue>/g;
+$s=~s/common>/commonName>/g; 
+print $s;

@@ -1,0 +1,100 @@
+# anything after a # sign on a line is just a COMMENT - it won't do anything
+
+varA <- 10   # sets up a vector with one element containing a 10
+
+varA  # listing an object's name prints out the values in the object
+
+varB <- c(10,20,30) # sets up a vector with 3 elements. c() is the concatenation function
+
+varB
+
+varB[2] # now let's display ONLY the second element from vector varB
+
+# now let's do some math!
+
+mySumAB <- varA + varB # adding them together. Note there is only 1 value in varA
+
+mySumAB  # display the result - note the single value in varA repeated in the addition
+
+vC <- c(3,4)  # let's see what happens with a vector of 3
+
+mySumBC <- varB + vC
+
+mySumBC    # the 3 got used TWICE, but the 4 only once as C wrapped around
+
+# ================ Other Demos==================
+
+#=============== Missing Values
+
+varA <- 10
+varA
+varA*2
+
+varB <- as.character(varA)
+varB
+varB*2
+
+varC <- c("1","A","2")
+varC
+as.numeric(varC)
+mean(as.numeric(varC))
+mean(as.numeric(varC),na.rm=TRUE)
+
+
+#==================  Factors
+
+factA <- as.factor(c(1,2,10))
+factA
+mean(as.numeric(factA))
+# above is the average of the INDEXES - not the values
+mean(as.numeric(levels(factA)))
+# this gives the correct answer
+
+#============== Data frames
+
+#create a data frame by binding together a set of columns
+myDataFrameA <- cbind(varA,varB,varC,factA)
+varD <- c(3,5,7)
+myDataFrameA <- cbind(myDataFrameA,varD)
+
+# write.csv(myDataFrameA,"c:/documents and settings/jhp7e/my documents/downloads/myDataFrameA.csv") - note this adds row names and quotes everything
+
+myDataFrameA <- read.csv("c:/documents and settings/jhp7e/my documents/downloads/myDataFrameA.csv")
+
+myDataFrameA
+
+attributes(myDataFrameA)
+
+mydfB <- edit(data.frame())
+
+#============= Functions
+inch2cm <- function(inchVal){
++    cmVal <- inchVal*2.54
++    return(cmVal)
++ }
+
+inch2cm(5)
+
+
+#================== Tools for QA/QC
+
+sevNPP <- read.table("C:/documents and settings/jhp7e/My Documents/Downloads/QAQC_Data/sev_npp_quad_data_1999_2010_forQAQC.txt",sep="\t",header=TRUE)
+
+names(sevNPP)
+attach(sevNPP)
+summary(sevNPP)
+# web should go from 1 to 5
+sevNPP[web > 5,]
+sevNPP[cover > 100,]
+View(sevNPP[(date == "10/4/2006" & site == "C"),])
+View(sevNPP[52000:52100,])
+sevNPP$cover[52068] <- NA
+test
+library(lattice)
+xyplot(cover~height|site,subset=(cover < 500 & height <2000))
+xyplot(cover~date|site)
+
+library(date)
+mydate <- as.Date(sevNPP$date,format="%m/%d/%Y")
+xyplot(cover~mydate|site)
+xyplot(cover~mydate|site,data=sevNPP[cover < 100,])

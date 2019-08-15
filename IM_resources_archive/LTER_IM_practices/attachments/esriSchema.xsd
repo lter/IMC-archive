@@ -1,0 +1,3510 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="absres">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="abstract">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="accconst">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="accinstr">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="address">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="addrtype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="albers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stdparll" maxOccurs="unbounded" />
+        <xs:element ref="longcm" />
+        <xs:element ref="latprjo" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="altdatum">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="altenc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="altres">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="altsys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="altdatum" />
+        <xs:element ref="altres" maxOccurs="unbounded" />
+        <xs:element ref="altunits" />
+        <xs:element ref="altenc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="altunits">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="arcsys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="arczone" />
+        <xs:choice>
+          <xs:element ref="equirect" />
+          <xs:element ref="azimequi" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="arczone">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="assndesc">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="atindex">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="atnumdec">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="atoutwid">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="atprecis">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attalias">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="attrlabl" />
+        <xs:element ref="attalias" minOccurs="0" />
+        <xs:element ref="attrdef" />
+        <xs:element ref="attrdefs" />
+        <xs:element ref="attrtype" />
+        <xs:element ref="attwidth" />
+        <xs:element ref="atprecis" minOccurs="0" />
+        <xs:element ref="attscale" minOccurs="0" />
+        <xs:element ref="atoutwid" minOccurs="0" />
+        <xs:element ref="atnumdec" minOccurs="0" />
+        <xs:element ref="atindex" minOccurs="0" />
+        <xs:element ref="attrdomv" maxOccurs="unbounded" />
+        <xs:sequence>
+          <xs:element ref="begdatea" />
+          <xs:element ref="enddatea" minOccurs="0" />
+        </xs:sequence>
+        <xs:element ref="attrvai" minOccurs="0" />
+        <xs:element ref="attrmfrq" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attracc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="attraccr" />
+        <xs:element ref="qattracc" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attracce">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="attraccr">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="attraccv">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="attrdef">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attrdefs">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attrdomv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="edom" maxOccurs="unbounded" />
+          <xs:element ref="rdom" />
+          <xs:element ref="codesetd" />
+          <xs:element ref="udom" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attrlabl">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attrmfrq">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="attrmres">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="attrtype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attrunit">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="attrva">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="attrvae">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="attrvai">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="attrva" />
+        <xs:element ref="attrvae" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attscale">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="attwidth">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="availabl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="timeinfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="azimangl">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="azimequi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="latprjo" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="azimptl">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="bearrefd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="bearrefm">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="bearres">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="bearunit">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="begdate">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="begdatea">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="begtime">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="behrmann">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Binary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Enclosure" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="Thumbnail" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="bonne">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stdparll" />
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="bottombc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="bounding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="westbc" />
+        <xs:element ref="eastbc" />
+        <xs:element ref="northbc" />
+        <xs:element ref="southbc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="browse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="browseem" minOccurs="0" />
+        <xs:element ref="browsen" />
+        <xs:element ref="browsed" />
+        <xs:element ref="browset" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="browsed">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="browseem">
+    <xs:complexType mixed="true">
+      <xs:attribute name="EsriPropertyType" type="xs:string" use="required" fixed="Picture" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="browsen">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="browset">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="caldate">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cassini">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sfctrmer" />
+        <xs:element ref="longcm" />
+        <xs:element ref="latprjo" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="citation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="citeinfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="citeinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="origin" maxOccurs="unbounded" />
+        <xs:element ref="pubdate" />
+        <xs:element ref="pubtime" minOccurs="0" />
+        <xs:element ref="title" />
+        <xs:element ref="edition" minOccurs="0" />
+        <xs:element ref="ftname" minOccurs="0" />
+        <xs:element ref="geoform" minOccurs="0" />
+        <xs:element ref="serinfo" minOccurs="0" />
+        <xs:element ref="pubinfo" minOccurs="0" />
+        <xs:element ref="othercit" minOccurs="0" />
+        <xs:element ref="onlink" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="lworkcit" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="city">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cloud">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="cntaddr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="addrtype" />
+        <xs:element ref="address" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="city" />
+        <xs:element ref="state" />
+        <xs:element ref="postal" />
+        <xs:element ref="country" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cntemail">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="cntfax">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="cntinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="cntperp" />
+          <xs:element ref="cntorgp" />
+        </xs:choice>
+        <xs:element ref="cntpos" minOccurs="0" />
+        <xs:element ref="cntaddr" maxOccurs="unbounded" />
+        <xs:element ref="cntvoice" maxOccurs="unbounded" />
+        <xs:element ref="cnttdd" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="cntfax" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="cntemail" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="hours" minOccurs="0" />
+        <xs:element ref="cntinst" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cntinst">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="cntorg">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cntorgp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cntorg" />
+        <xs:element ref="cntper" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cntper">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cntperp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cntper" />
+        <xs:element ref="cntorg" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cntpos">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="cnttdd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="cntvoice">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="codesetd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="codesetn" />
+        <xs:element ref="codesets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="codesetn">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="codesets">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="colcount">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="compat">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="complete">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="compress">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="computer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="networka" />
+          <xs:element ref="dialinst" />
+          <xs:element ref="sdeconn" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="connrule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ruletype" />
+        <xs:element ref="rulecat" minOccurs="0" />
+        <xs:element ref="rulehelp" minOccurs="0" />
+        <xs:element ref="rulefeid" minOccurs="0" />
+        <xs:element ref="rulefest" minOccurs="0" />
+        <xs:element ref="ruleteid" minOccurs="0" />
+        <xs:element ref="ruletest" minOccurs="0" />
+        <xs:element ref="ruledjid" minOccurs="0" />
+        <xs:element ref="ruledjst" minOccurs="0" />
+        <xs:element ref="rulejunc" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="ruleeid" minOccurs="0" />
+        <xs:element ref="ruleest" minOccurs="0" />
+        <xs:element ref="ruleemnc" minOccurs="0" />
+        <xs:element ref="ruleemxc" minOccurs="0" />
+        <xs:element ref="rulejid" minOccurs="0" />
+        <xs:element ref="rulejst" minOccurs="0" />
+        <xs:element ref="rulejmnc" minOccurs="0" />
+        <xs:element ref="rulejmxc" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="coordrep">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="absres" />
+        <xs:element ref="ordres" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cordsysn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="geogcsn" />
+        <xs:element ref="projcsn" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="country">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="CreaDate">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="CreaTime">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="crossref">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="assndesc" minOccurs="0" />
+        <xs:element ref="citeinfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="current">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="custom">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="Data">
+    <xs:complexType mixed="true">
+      <xs:attribute name="OriginalFileName" type="xs:string" use="optional" />
+      <xs:attribute name="EsriPropertyType" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Picture" />
+            <xs:enumeration value="Base64" />
+            <xs:enumeration value="Image" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="database">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="datacred">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="dataqual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="attracc" minOccurs="0" />
+        <xs:element ref="logic" />
+        <xs:element ref="complete" />
+        <xs:element ref="posacc" minOccurs="0" />
+        <xs:element ref="lineage" />
+        <xs:element ref="cloud" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="denflat">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="depthdn">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="depthdu">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="depthem">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="depthres">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="depthsys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="depthdn" />
+        <xs:element ref="depthres" maxOccurs="unbounded" />
+        <xs:element ref="depthdu" />
+        <xs:element ref="depthem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="descript">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="abstract" />
+        <xs:element ref="purpose" />
+        <xs:element ref="langdata" />
+        <xs:element ref="supplinf" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Description">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="detailed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="enttyp" />
+        <xs:element ref="attr" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="subtype" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="relinfo" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dialfile">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="dialinst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lowbps" />
+        <xs:element ref="highbps" minOccurs="0" />
+        <xs:element ref="numdata" />
+        <xs:element ref="numstop" />
+        <xs:element ref="parity" />
+        <xs:element ref="compress" minOccurs="0" />
+        <xs:element ref="dialtel" maxOccurs="unbounded" />
+        <xs:element ref="dialfile" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dialtel">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="digform">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="digtinfo" />
+        <xs:element ref="digtopt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="digtinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="formname" />
+        <xs:sequence>
+          <xs:choice>
+            <xs:element ref="formvern" />
+            <xs:element ref="formverd" />
+          </xs:choice>
+          <xs:element ref="formspec" minOccurs="0" />
+        </xs:sequence>
+        <xs:element ref="formcont" minOccurs="0" />
+        <xs:element ref="filedec" minOccurs="0" />
+        <xs:element ref="transize" minOccurs="0" />
+        <xs:element ref="dssize" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="digtopt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence>
+          <xs:choice>
+            <xs:element ref="onlinopt" />
+            <xs:element ref="offoptn" />
+          </xs:choice>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="direct">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="distbrep">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="distres" />
+        <xs:element ref="bearres" />
+        <xs:element ref="bearunit" />
+        <xs:element ref="bearrefd" />
+        <xs:element ref="bearrefm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="distinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="distrib" />
+        <xs:sequence>
+          <xs:element ref="resdesc" minOccurs="0" />
+          <xs:element ref="distliab" />
+          <xs:element ref="stdorder" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element ref="custom" minOccurs="0" />
+          <xs:element ref="techpreq" minOccurs="0" />
+          <xs:element ref="availabl" minOccurs="0" />
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="distliab">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="distres">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="distrib">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cntinfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="domdesc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="domfldtp">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="domname">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="domowner">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="domtype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dsgpoly">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dsgpolyo" />
+        <xs:element ref="dsgpolyx" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dsgpolyo">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="grngpoin" />
+          <xs:element ref="grngpoin" />
+          <xs:element ref="grngpoin" />
+          <xs:element ref="grngpoin" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:element ref="gring" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dsgpolyx">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="grngpoin" />
+          <xs:element ref="grngpoin" />
+          <xs:element ref="grngpoin" />
+          <xs:element ref="grngpoin" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:element ref="gring" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dssize">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dtfcfkey">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dtfcname">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dtfcpkey">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="eadetcit">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="eainfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="detailed" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="overview" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="eaover">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="eastbc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="eckert1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="eckert2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="eckert3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="eckert4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="eckert5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="eckert6">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="edition">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="edom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="edomv" />
+        <xs:element ref="edomvd" />
+        <xs:element ref="edomvds" />
+        <xs:element ref="attr" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="edomv">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="edomvd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="edomvds">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="efeacnt">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="efeageom">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="efeatyp">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="eframes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="framect" />
+        <xs:element ref="framenam" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="elemcls">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="roletype" />
+        <xs:element ref="rolefld" minOccurs="0" />
+        <xs:element ref="enabfld" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ellips">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="enabfld">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Enclosure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Description" />
+        <xs:element ref="Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="enddate">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="enddatea">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="endtime">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="enttyp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="enttypl" />
+        <xs:element ref="enttypt" minOccurs="0" />
+        <xs:element ref="enttypc" minOccurs="0" />
+        <xs:element ref="enttypd" />
+        <xs:element ref="enttypds" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="enttypc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="enttypd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="enttypds">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="enttypl">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="enttypt">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="equicon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stdparll" maxOccurs="unbounded" />
+        <xs:element ref="longcm" />
+        <xs:element ref="latprjo" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="equirect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stdparll" />
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Esri">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MetaID" minOccurs="0" />
+        <xs:element ref="CreaDate" minOccurs="0" />
+        <xs:element ref="CreaTime" minOccurs="0" />
+        <xs:element ref="SyncOnce" minOccurs="0" />
+        <xs:element ref="SyncDate" minOccurs="0" />
+        <xs:element ref="SyncTime" minOccurs="0" />
+        <xs:element ref="ModDate" minOccurs="0" />
+        <xs:element ref="ModTime" minOccurs="0" />
+        <xs:element ref="Sync" minOccurs="0" />
+        <xs:element ref="RematchLocator" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="esriterm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="efeatyp" />
+        <xs:element ref="efeageom" />
+        <xs:element ref="esritopo" />
+        <xs:element ref="efeacnt" />
+        <xs:element ref="spindex" />
+        <xs:element ref="linrefer" />
+        <xs:element ref="netwrole" minOccurs="0" />
+        <xs:element ref="featdesc" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="esritopo">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="feast">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="featdesc">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="fees">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="filedec">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="fnorth">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="formcont">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="formname">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="formspec">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="formverd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="formvern">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="framect">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="framenam">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="ftname">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="gallster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="geodetic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="horizdn" minOccurs="0" />
+        <xs:element ref="ellips" />
+        <xs:element ref="semiaxis" />
+        <xs:element ref="denflat" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="geoform">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="geogcsn">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="geograph">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="latres" />
+        <xs:element ref="longres" />
+        <xs:element ref="geogunit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="geogunit">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="gnomonic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longpc" />
+        <xs:element ref="latprjc" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="gridsys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gridsysn" />
+        <xs:choice>
+          <xs:element ref="utm" />
+          <xs:element ref="ups" />
+          <xs:element ref="spcs" />
+          <xs:element ref="arcsys" />
+          <xs:element ref="othergrd" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="gridsysn">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="gring">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="gringlat">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="gringlon">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="grngpoin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gringlat" />
+        <xs:element ref="gringlon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="gvnsp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="heightpt" />
+        <xs:element ref="longpc" />
+        <xs:element ref="latprjc" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="heightpt">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="highbps">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="horizdn">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="horizpa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="horizpar" />
+        <xs:element ref="qhorizpa" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="horizpae">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="horizpar">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="horizpav">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="horizsys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cordsysn" minOccurs="0" />
+        <xs:choice>
+          <xs:element ref="geograph" />
+          <xs:element ref="planar" maxOccurs="unbounded" />
+          <xs:element ref="local" />
+        </xs:choice>
+        <xs:element ref="geodetic" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="hours">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="idinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="citation" />
+        <xs:element ref="descript" />
+        <xs:element ref="timeperd" />
+        <xs:element ref="status" />
+        <xs:element ref="spdom" />
+        <xs:element ref="keywords" />
+        <xs:element ref="accconst" />
+        <xs:element ref="useconst" />
+        <xs:element ref="ptcontac" minOccurs="0" />
+        <xs:element ref="browse" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="datacred" minOccurs="0" />
+        <xs:element ref="secinfo" minOccurs="0" />
+        <xs:element ref="native" minOccurs="0" />
+        <xs:element ref="natvform" />
+        <xs:element ref="crossref" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="indspref">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="instance">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="issue">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="junctid">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="junctst">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="keywords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="theme" maxOccurs="unbounded" />
+        <xs:element ref="place" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="stratum" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="temporal" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="lamberta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longpc" />
+        <xs:element ref="latprjc" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="lambertc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stdparll" maxOccurs="unbounded" />
+        <xs:element ref="longcm" />
+        <xs:element ref="latprjo" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="landsat">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="langdata">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="langmeta">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="latprjc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="latprjo">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="latres">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="lboundng">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="leftbc" />
+        <xs:element ref="rightbc" />
+        <xs:element ref="topbc" />
+        <xs:element ref="bottombc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="leftbc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="lineage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="srcinfo" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="procstep" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="linrefer">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="local">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="localdes" />
+        <xs:element ref="localgeo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="localdes">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="localgeo">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="localp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="localpd" />
+        <xs:element ref="localpgi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="localpd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="localpgi">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="logic">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="longcm">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="longpc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="longres">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="lowbps">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="loximuth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="latprjo" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="lworkcit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="citeinfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mapproj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mapprojn" />
+        <xs:choice>
+          <xs:element ref="albers" />
+          <xs:element ref="azimequi" />
+          <xs:element ref="equicon" />
+          <xs:element ref="equirect" />
+          <xs:element ref="gvnsp" />
+          <xs:element ref="gnomonic" />
+          <xs:element ref="lamberta" />
+          <xs:element ref="lambertc" />
+          <xs:element ref="mercator" />
+          <xs:element ref="modsak" />
+          <xs:element ref="miller" />
+          <xs:element ref="obqmerc" />
+          <xs:element ref="orthogr" />
+          <xs:element ref="polarst" />
+          <xs:element ref="polycon" />
+          <xs:element ref="robinson" />
+          <xs:element ref="sinusoid" />
+          <xs:element ref="spaceobq" />
+          <xs:element ref="stereo" />
+          <xs:element ref="transmer" />
+          <xs:element ref="vdgrin" />
+          <xs:element ref="otherprj" />
+          <xs:element ref="mapprojp" />
+          <xs:element ref="behrmann" />
+          <xs:element ref="bonne" />
+          <xs:element ref="cassini" />
+          <xs:element ref="eckert1" />
+          <xs:element ref="eckert2" />
+          <xs:element ref="eckert3" />
+          <xs:element ref="eckert4" />
+          <xs:element ref="eckert5" />
+          <xs:element ref="eckert6" />
+          <xs:element ref="gallster" />
+          <xs:element ref="loximuth" />
+          <xs:element ref="mollweid" />
+          <xs:element ref="quartic" />
+          <xs:element ref="winkel1" />
+          <xs:element ref="winkel2" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mapprojn">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mapprojp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="azimptl" minOccurs="0" />
+        <xs:element ref="azimangl" minOccurs="0" />
+        <xs:element ref="feast" minOccurs="0" />
+        <xs:element ref="fnorth" minOccurs="0" />
+        <xs:element ref="heightpt" minOccurs="0" />
+        <xs:element ref="landsat" minOccurs="0" />
+        <xs:element ref="latprjc" minOccurs="0" />
+        <xs:element ref="latprjo" minOccurs="0" />
+        <xs:element ref="longcm" minOccurs="0" />
+        <xs:element ref="longpc" minOccurs="0" />
+        <xs:element ref="obqlazim" minOccurs="0" />
+        <xs:element ref="obqlpt" minOccurs="0" />
+        <xs:element ref="obqllat" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="obqllong" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="pathnum" minOccurs="0" />
+        <xs:element ref="sfctrlin" minOccurs="0" />
+        <xs:element ref="sfctrmer" minOccurs="0" />
+        <xs:element ref="sfequat" minOccurs="0" />
+        <xs:element ref="sfprjorg" minOccurs="0" />
+        <xs:element ref="stdparll" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="svlong" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="maxalti">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mdattim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sngdate" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mercator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="stdparll" />
+          <xs:element ref="sfequat" />
+        </xs:choice>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metac">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="metadata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Esri" minOccurs="0" />
+        <xs:element ref="idinfo" />
+        <xs:element ref="dataqual" minOccurs="0" />
+        <xs:element ref="spdoinfo" minOccurs="0" />
+        <xs:element ref="spref" minOccurs="0" />
+        <xs:element ref="eainfo" minOccurs="0" />
+        <xs:element ref="distinfo" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="metainfo" />
+        <xs:element ref="Binary" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MetaID">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="metainfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="metd" />
+        <xs:sequence>
+          <xs:element ref="metrd" />
+          <xs:element ref="metfrd" minOccurs="0" />
+        </xs:sequence>
+        <xs:element ref="langmeta" />
+        <xs:element ref="metc" />
+        <xs:element ref="metstdn" />
+        <xs:element ref="metstdv" />
+        <xs:element ref="mettc" minOccurs="0" />
+        <xs:element ref="metac" minOccurs="0" />
+        <xs:element ref="metuc" minOccurs="0" />
+        <xs:element ref="metsi" minOccurs="0" />
+        <xs:element ref="metextns" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cntinfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metd">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metextns">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="onlink" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="metprof" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metfrd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="metprof">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metrd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="metsc">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="metscs">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="metshd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="metsi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="metscs" />
+        <xs:element ref="metsc" />
+        <xs:element ref="metshd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metstdn">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metstdv">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mettc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metuc">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="miller">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="minalti">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ModDate">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="modsak">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ModTime">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="mollweid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mrgtype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="native">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="natvform">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="netinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nettype" />
+        <xs:element ref="connrule" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="elemcls" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="nettype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="networka">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="networkr" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="networkr">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="netwrole">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="nondig">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="northbc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="numdata">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="numstop">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="obqlazim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="azimangl" />
+        <xs:element ref="azimptl" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="obqllat">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="obqllong">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="obqlpt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence>
+          <xs:element ref="obqllat" />
+          <xs:element ref="obqllong" />
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="obqllat" />
+          <xs:element ref="obqllong" />
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="obqmerc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sfctrlin" />
+        <xs:choice>
+          <xs:element ref="obqlazim" />
+          <xs:element ref="obqlpt" />
+        </xs:choice>
+        <xs:element ref="latprjo" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="offmedia">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="offoptn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="offmedia" />
+        <xs:element ref="reccap" minOccurs="0" />
+        <xs:element ref="recfmt" maxOccurs="unbounded" />
+        <xs:element ref="compat" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="oncomp">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="onlink">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="onlinopt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="computer" maxOccurs="unbounded" />
+        <xs:element ref="accinstr" minOccurs="0" />
+        <xs:element ref="oncomp" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ordering">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="ordres">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="origin">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="orthogr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longpc" />
+        <xs:element ref="latprjc" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="otfcfkey">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="otfcname">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="otfcpkey">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="othercit">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="othergrd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="otherprj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:any namespace="http://www.w3.org/namespace/" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="overview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="eaover" />
+        <xs:element ref="eadetcit" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="parity">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="pathnum">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="place">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="placekt" />
+        <xs:element ref="placekey" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="placekey">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="placekt">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="planar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="mapproj" />
+          <xs:element ref="gridsys" />
+          <xs:element ref="localp" />
+        </xs:choice>
+        <xs:element ref="planci" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="plance">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="planci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="plance" />
+        <xs:choice>
+          <xs:element ref="coordrep" />
+          <xs:element ref="distbrep" />
+        </xs:choice>
+        <xs:element ref="plandu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="plandu">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="polarst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="svlong" />
+        <xs:choice>
+          <xs:element ref="stdparll" />
+          <xs:element ref="sfprjorg" />
+        </xs:choice>
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="polycon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="latprjo" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="posacc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="horizpa" minOccurs="0" />
+        <xs:element ref="vertacc" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="postal">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="proccont">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cntinfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="procdate">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="procdesc">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="procstep">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="procdesc" />
+        <xs:element ref="procsv" minOccurs="0" />
+        <xs:element ref="srcused" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="procdate" />
+        <xs:element ref="proctime" minOccurs="0" />
+        <xs:element ref="srcprod" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="proccont" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="procsv">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="proctime">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="progress">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="projcsn">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ptcontac">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cntinfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ptvctcnt">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ptvctinf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="esriterm" minOccurs="0" maxOccurs="unbounded" />
+        <xs:choice>
+          <xs:element ref="sdtsterm" maxOccurs="unbounded" />
+          <xs:element ref="vpfterm" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="pubdate">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="pubinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="pubplace" />
+        <xs:element ref="publish" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="publish">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="pubplace">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="pubtime">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="purpose">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="qattracc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="attraccv" />
+        <xs:element ref="attracce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="qhorizpa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="horizpav" />
+        <xs:element ref="horizpae" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="quartic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="qvertpa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vertaccv" />
+        <xs:element ref="vertacce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastband">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastbpp">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastcmap">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastcomp">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastdtyp">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastifor">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rasttype" />
+        <xs:element ref="rastdtyp" minOccurs="0" />
+        <xs:sequence>
+          <xs:element ref="rowcount" />
+          <xs:element ref="colcount" />
+          <xs:element ref="vrtcount" minOccurs="0" />
+        </xs:sequence>
+        <xs:element ref="rastorig" minOccurs="0" />
+        <xs:element ref="rastband" minOccurs="0" />
+        <xs:element ref="rastxsz" minOccurs="0" />
+        <xs:element ref="rastxu" minOccurs="0" />
+        <xs:element ref="rastysz" minOccurs="0" />
+        <xs:element ref="rastyu" minOccurs="0" />
+        <xs:element ref="rastbpp" minOccurs="0" />
+        <xs:element ref="rastnodt" minOccurs="0" />
+        <xs:element ref="rastplyr" minOccurs="0" />
+        <xs:element ref="rastifor" />
+        <xs:element ref="rastityp" minOccurs="0" />
+        <xs:element ref="rastcmap" minOccurs="0" />
+        <xs:element ref="rastcomp" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastityp">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rastnodt">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rastorig">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastplyr">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rasttype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastxsz">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastxu">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rastysz">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rastyu">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rdom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rdommin" />
+        <xs:element ref="rdommax" />
+        <xs:element ref="rdommean" minOccurs="0" />
+        <xs:element ref="rdomstdv" minOccurs="0" />
+        <xs:element ref="attrunit" minOccurs="0" />
+        <xs:element ref="attrmres" minOccurs="0" />
+        <xs:element ref="attr" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rdommax">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rdommean">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rdommin">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rdomstdv">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="reccap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="recden" maxOccurs="unbounded" />
+        <xs:element ref="recdenu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="recden">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="recdenu">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="recfmt">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="relattr">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="relblab">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="relcard">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="relcomp">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="reldesc">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="relflab">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="relinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="reldesc" minOccurs="0" />
+        <xs:element ref="relcard" />
+        <xs:element ref="relattr" />
+        <xs:element ref="relcomp" />
+        <xs:element ref="relnodir" />
+        <xs:element ref="otfcname" />
+        <xs:element ref="otfcpkey" />
+        <xs:element ref="otfcfkey" />
+        <xs:element ref="dtfcname" />
+        <xs:element ref="dtfcpkey" />
+        <xs:element ref="dtfcfkey" />
+        <xs:element ref="relflab" />
+        <xs:element ref="relblab" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="relnodir">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="RematchLocator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:any namespace="http://www.w3.org/namespace/" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="resdesc">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rightbc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rngdates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="begdate" />
+        <xs:element ref="begtime" minOccurs="0" />
+        <xs:element ref="enddate" />
+        <xs:element ref="endtime" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="robinson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longpc" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rolefld">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="roletype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rowcount">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rulecat">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ruledjid">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ruledjst">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ruleeid">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ruleemnc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ruleemxc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ruleest">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rulefeid">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rulefest">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rulehelp">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rulejid">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rulejmnc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rulejmxc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rulejst">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rulejunc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="junctid" />
+        <xs:element ref="junctst" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ruleteid">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ruletest">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ruletype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sdeconn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="server" />
+        <xs:element ref="instance" />
+        <xs:element ref="database" minOccurs="0" />
+        <xs:element ref="user" />
+        <xs:element ref="version" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sdtsterm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sdtstype" />
+        <xs:element ref="ptvctcnt" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sdtstype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="secclass">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="sechandl">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="secinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="secsys" />
+        <xs:element ref="secclass" />
+        <xs:element ref="sechandl" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="secsys">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="semiaxis">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="serinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sername" />
+        <xs:element ref="issue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sername">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="server">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sfctrlin">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sfctrmer">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sfequat">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="sfprjorg">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="sinusoid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sngdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="caldate" />
+        <xs:element ref="time" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="southbc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="spaceobq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="landsat" />
+        <xs:element ref="pathnum" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="spcs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="spcszone" />
+        <xs:choice>
+          <xs:element ref="lambertc" />
+          <xs:element ref="transmer" />
+          <xs:element ref="obqmerc" />
+          <xs:element ref="polycon" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="spcszone">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="spdoinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="indspref" minOccurs="0" />
+        <xs:sequence>
+          <xs:element ref="direct" />
+          <xs:sequence>
+            <xs:choice>
+              <xs:element ref="ptvctinf" />
+              <xs:element ref="rastinfo" />
+            </xs:choice>
+          </xs:sequence>
+        </xs:sequence>
+        <xs:element ref="netinfo" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="spdom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="bounding" />
+        <xs:element ref="lboundng" minOccurs="0" />
+        <xs:element ref="minalti" minOccurs="0" />
+        <xs:element ref="maxalti" minOccurs="0" />
+        <xs:element ref="altunits" minOccurs="0" />
+        <xs:element ref="dsgpoly" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="eframes" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="spindex">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="splttype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="spref">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="horizsys" minOccurs="0" />
+        <xs:element ref="vertdef" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="srccite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="citeinfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="srccitea">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="srccontr">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="srccurr">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="srcinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="srccite" />
+        <xs:element ref="srcscale" minOccurs="0" />
+        <xs:element ref="typesrc" />
+        <xs:element ref="srctime" />
+        <xs:element ref="srccitea" />
+        <xs:element ref="srccontr" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="srcprod">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="srcscale">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="srctime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="timeinfo" />
+        <xs:element ref="srccurr" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="srcused">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="state">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="status">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="progress" />
+        <xs:element ref="update" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stcode">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stdorder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="nondig" />
+          <xs:element ref="digform" maxOccurs="unbounded" />
+        </xs:choice>
+        <xs:element ref="fees" />
+        <xs:element ref="ordering" minOccurs="0" />
+        <xs:element ref="turnarnd" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stdparll">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stereo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longpc" />
+        <xs:element ref="latprjc" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stfield">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stfldnm" />
+        <xs:element ref="stflddv" minOccurs="0" />
+        <xs:element ref="stflddd" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stflddd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="domname" />
+        <xs:element ref="domdesc" minOccurs="0" />
+        <xs:element ref="domowner" minOccurs="0" />
+        <xs:element ref="domfldtp" />
+        <xs:element ref="domtype" />
+        <xs:element ref="mrgtype" />
+        <xs:element ref="splttype" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stflddv">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stfldnm">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stname">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stratkey">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="stratkt">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="stratum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stratkt" />
+        <xs:element ref="stratkey" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="subtype">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stname" />
+        <xs:element ref="stcode" />
+        <xs:element ref="stfield" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="supplinf">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="svlong">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="Sync">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="SyncDate">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="SyncOnce">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="SyncTime">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="techpreq">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="tempkey">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="tempkt">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="temporal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tempkt" />
+        <xs:element ref="tempkey" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="theme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="themekt" />
+        <xs:element ref="themekey" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="themekey">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="themekt">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Thumbnail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="time">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="timeinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="sngdate" />
+          <xs:element ref="mdattim" />
+          <xs:element ref="rngdates" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="timeperd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="timeinfo" />
+        <xs:element ref="current" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="title">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="topbc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="transize">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="transmer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sfctrmer" />
+        <xs:element ref="longcm" />
+        <xs:element ref="latprjo" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="turnarnd">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="typesrc">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="udom">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="update">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="upszone" />
+        <xs:element ref="polarst" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="upszone">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="useconst">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="user">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="utm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="utmzone" />
+        <xs:element ref="transmer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="utmzone">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="vdgrin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="version">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="vertacc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vertaccr" />
+        <xs:element ref="qvertpa" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="vertacce">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="vertaccr">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="vertaccv">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="vertdef">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="altsys" minOccurs="0" />
+        <xs:element ref="depthsys" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="vpfinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vpftype" />
+        <xs:element ref="ptvctcnt" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="vpflevel">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="vpfterm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vpflevel" />
+        <xs:element ref="vpfinfo" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="vpftype">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="vrtcount">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="westbc">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Sync" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="winkel1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stdparll" />
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="winkel2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stdparll" />
+        <xs:element ref="longcm" />
+        <xs:element ref="feast" />
+        <xs:element ref="fnorth" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

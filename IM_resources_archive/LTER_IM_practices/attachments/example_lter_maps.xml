@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:ds="eml://ecoinformatics.org/dataset-2.1.0"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="eml://ecoinformatics.org/eml-2.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1"
+        xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.0 http://nis.lternet.edu/schemas/EML/eml-2.1.0/eml.xsd"
+        packageId="knb-lter-fls.21.3" system="FLS" scope="system">
+        <access authSystem="knb" order="allowFirst" scope="document">
+                <allow>
+                        <principal>public</principal>
+                        <permission>read</permission>
+                </allow>
+        </access>
+        <dataset id="FLS-1" system="FLS">
+                <alternateIdentifier>FLS-1</alternateIdentifier>
+                <shortName>Arthropods</shortName>
+                <title>Longterm Ground Arthropod Monitoring Dataset at Ficity, USA from 1998 to 2003</title>
+                <creator id="org-1" system="FLS">
+                        <organizationName>Fictitious LTER Site</organizationName>
+                        <address>
+                                <deliveryPoint>Department for Ecology</deliveryPoint>
+                                <deliveryPoint>Fictitious State University</deliveryPoint>
+                                <deliveryPoint>PO Box 111111</deliveryPoint>
+                                <city>Ficity</city>
+                                <administrativeArea>FI</administrativeArea>
+                                <postalCode>11111-1111</postalCode>
+                        </address>
+                        <phone phonetype="voice">(999) 999-9999</phone>
+                        <electronicMailAddress>fsu@fi.univ.edu</electronicMailAddress>
+                        <onlineUrl>http://www.fsu.edu/</onlineUrl>
+                </creator>
+                <creator id="pers-1" system="FLS">
+                        <individualName>
+                                <salutation>Dr.</salutation>
+                                <givenName>Joe</givenName>
+                                <givenName>T.</givenName>
+                                <surName>Ecologist Jr.</surName>
+                        </individualName>
+                        <organizationName>FSL LTER</organizationName>
+                        <address>
+                                <deliveryPoint>Department for Ecology</deliveryPoint>
+                                <deliveryPoint>Fictitious State University</deliveryPoint>
+                                <deliveryPoint>PO Box 111111</deliveryPoint>
+                                <city>Ficity</city>
+                                <administrativeArea>FI</administrativeArea>
+                                <postalCode>11111-1111</postalCode>
+                        </address>
+                        <phone phonetype="voice">(999) 999-9999</phone>
+                        <electronicMailAddress>jecologist@fi.univ.edu</electronicMailAddress>
+                        <onlineUrl>http://www.fsu.edu/~jecologist</onlineUrl>
+                </creator>
+                <metadataProvider>
+                        <organizationName>Fictitious LTER Site</organizationName>
+                        <address>
+                                <deliveryPoint>Department for Ecology</deliveryPoint>
+                                <deliveryPoint>Fictitious State University</deliveryPoint>
+                                <deliveryPoint>PO Box 111111</deliveryPoint>
+                                <city>Ficity</city>
+                                <administrativeArea>FI</administrativeArea>
+                                <postalCode>11111-1111</postalCode>
+                        </address>
+                        <phone phonetype="voice">(999) 999-9999</phone>
+                        <electronicMailAddress>fsu@fi.univ.edu</electronicMailAddress>
+                        <onlineUrl>http://www.fsu.edu/</onlineUrl>
+                </metadataProvider>
+                <associatedParty id="12010" system="FLS">
+                        <individualName>
+                                <givenName>Ima</givenName>
+                                <surName>Testuser</surName>
+                        </individualName>
+                        <organizationName>FSL LTER</organizationName>
+                        <address>
+                                <deliveryPoint>Department for Ecology</deliveryPoint>
+                                <deliveryPoint>Fictitious State University</deliveryPoint>
+                                <deliveryPoint>PO Box 111111</deliveryPoint>
+                                <city>Ficity</city>
+                                <administrativeArea>FI</administrativeArea>
+                                <postalCode>11111-1111</postalCode>
+                        </address>
+                        <phone phonetype="voice">(999) 999-9999</phone>
+                        <electronicMailAddress>itestuser@lternet.edu</electronicMailAddress>
+                        <onlineUrl>http://search.lternet.edu/directory_view.php?personid=12010&amp;query=itestuser</onlineUrl>
+                        <role>Technician</role>
+                </associatedParty>
+                <pubDate>2000</pubDate>
+                <abstract>
+                        <para>Ground arthropods communities are monitored in different habitats in a
+                                rapidly changing environment. The arthropods are collected in traps
+                                four times a year in ten locations and determined as far as possible
+                                to family, genus or species.</para>
+                </abstract>
+                <keywordSet>
+                        <keyword keywordType="place">City</keyword>
+                        <keyword keywordType="place">State</keyword>
+                        <keyword keywordType="place">Region</keyword>
+                        <keyword keywordType="place">County</keyword>
+                        <keyword keywordType="theme">FLS</keyword>
+                        <keyword keywordType="theme">Fictitious LTER Site</keyword>
+                        <keyword keywordType="theme">LTER</keyword>
+                        <keyword keywordType="theme">Arthropods</keyword>
+                        <keyword keywordType="theme">Richness</keyword>
+                        <keywordThesaurus>FLS site thesaurus</keywordThesaurus>
+                </keywordSet>
+                <keywordSet>
+                        <keyword keywordType="theme">ecology</keyword>
+                        <keyword keywordType="theme">biodiversity</keyword>
+                        <keyword keywordType="theme">population dynamics</keyword>
+                        <keyword keywordType="theme">terrestrial</keyword>
+                        <keyword keywordType="theme">arthropods</keyword>
+                        <keyword keywordType="theme">pitfall trap</keyword>
+                        <keyword keywordType="theme">monitoring</keyword>
+                        <keyword keywordType="theme">abundance</keyword>
+                        <keywordThesaurus>LTER controlled vocabulary</keywordThesaurus>
+                </keywordSet>
+                <keywordSet>
+                        <keyword keywordType="theme">populations</keyword>
+                        <keywordThesaurus>LTER core research areas</keywordThesaurus>
+                </keywordSet>
+                <intellectualRights>
+                        <section>
+                                <title>Copyright Notice</title>
+                                <para> Copyright Board of Regents, Fictitious State University. This
+                                        dataset is released to the public and may be used for
+                                        academic, educational, or commercial purposes subject to the
+                                        following restrictions:</para>
+                                <para>
+                                        <itemizedlist>
+                                                <listitem>
+                                                  <para>While FLS LTER will make every effort
+                                                  possible to control and document the quality of
+                                                  the data it publishes, the data are made available
+                                                  "as is". </para>
+                                                </listitem>
+                                                <listitem>
+                                                  <para>FLS LTER cannot assume responsibility for
+                                                  damages resulting from mis-use or
+                                                  mis-interpretation of datasets or from errors or
+                                                  omissions that may exist in the data.</para>
+                                                </listitem>
+                                                <listitem>
+                                                  <para>It is considered a matter of professional
+                                                  ethics to acknowledge the work of other scientists
+                                                  that has resulted in data used in subsequent
+                                                  research.</para>
+                                                </listitem>
+                                                <listitem>
+                                                  <para>FLS LTER expects that any use of data from
+                                                  this server will be accompanied with the
+                                                  appropriate citations and acknowledgments. </para>
+                                                </listitem>
+                                                <listitem>
+                                                  <para>FLS LTER encourages users to contact the
+                                                  original investigator responsible for the data
+                                                  that they are accessing. Where appropriate,
+                                                  researchers whose projects are integrally
+                                                  dependent on FLS LTER data are encouraged to
+                                                  consider collaboration and/or co-authorship with
+                                                  original investigators. </para>
+                                                </listitem>
+                                                <listitem>
+                                                  <para>FLS LTER requests that users submit to FLS
+                                                  LTER one copy of any publication resulting from
+                                                  the use of data obtained from this site. </para>
+                                                </listitem>
+                                                <listitem>
+                                                  <para>FLS LTER requests that users not
+                                                  redistribute data obtained from this site.
+                                                  However, links or references to this site may be
+                                                  freely posted.</para>
+                                                </listitem>
+                                        </itemizedlist>
+                                </para>
+                        </section>
+                </intellectualRights>
+                <distribution>
+                        <online>
+                                <onlineDescription>f1s-1 Data Web Page</onlineDescription>
+                                <url>http://www.fsu.edu/lter/data/fls-1.htm</url>
+                        </online>
+                </distribution>
+                <coverage id="coverage.fsl-1">
+                        <geographicCoverage>
+                                <geographicDescription>North Hog Island (chronosequence) - North Hog Island (chronosequence)</geographicDescription>
+                                <boundingCoordinates>
+                                        <westBoundingCoordinate>-75.657464</westBoundingCoordinate>
+                                        <eastBoundingCoordinate>-75.675944</eastBoundingCoordinate>
+                                        <northBoundingCoordinate>37.453103</northBoundingCoordinate>
+                                        <southBoundingCoordinate>37.445453</southBoundingCoordinate>
+                                </boundingCoordinates>
+                                <datasetGPolygon>
+                                        <datasetGPolygonOuterGRing>
+                                                <gRingPoint>
+                                                  <gRingLatitude>-71.726501</gRingLatitude>
+                                                  <gRingLongitude>43.952034</gRingLongitude>
+                                                </gRingPoint>
+                                                <gRingPoint>
+                                                  <gRingLatitude>-71.727501</gRingLatitude>
+                                                  <gRingLongitude>45.956034</gRingLongitude>
+                                                </gRingPoint>
+                                                <gRingPoint>
+                                                  <gRingLatitude>-71.726201</gRingLatitude>
+                                                  <gRingLongitude>44.952934</gRingLongitude>
+                                                </gRingPoint>
+                                                <gRingPoint>
+                                                  <gRingLatitude>-71.726501</gRingLatitude>
+                                                  <gRingLongitude>43.952034</gRingLongitude>
+                                                </gRingPoint>
+                                        </datasetGPolygonOuterGRing>
+                                </datasetGPolygon>
+                        </geographicCoverage>
+                        <geographicCoverage>
+                                <geographicDescription>Ficity, FI metropolitan area, USA</geographicDescription>
+                                <boundingCoordinates>
+                                        <westBoundingCoordinate>-112.373614</westBoundingCoordinate>
+                                        <eastBoundingCoordinate>-111.612936</eastBoundingCoordinate>
+                                        <northBoundingCoordinate>33.708829</northBoundingCoordinate>
+                                        <southBoundingCoordinate>33.298975</southBoundingCoordinate>
+                                        <boundingAltitudes>
+                                                <altitudeMinimum>300</altitudeMinimum>
+                                                <altitudeMaximum>600</altitudeMaximum>
+                                                <altitudeUnits>meter</altitudeUnits>
+                                        </boundingAltitudes>
+                                </boundingCoordinates>
+                        </geographicCoverage>
+                        <temporalCoverage>
+                                <rangeOfDates>
+                                        <beginDate>
+                                                <calendarDate>1998-11-12</calendarDate>
+                                        </beginDate>
+                                        <endDate>
+                                                <calendarDate>2003-12-31</calendarDate>
+                                        </endDate>
+                                </rangeOfDates>
+                        </temporalCoverage>
+                        <taxonomicCoverage>
+                                <generalTaxonomicCoverage>Orthopteran insects (grasshoppers) were identified to species</generalTaxonomicCoverage>
+                                <taxonomicClassification>
+                                        <taxonRankName>Kingdom</taxonRankName>
+                                        <taxonRankValue>Animalia</taxonRankValue>
+                                        <taxonomicClassification>
+                                                <taxonRankName>Phylum</taxonRankName>
+                                                <taxonRankValue>Arthropoda</taxonRankValue>
+                                                <taxonomicClassification>
+                                                  <taxonRankName>Class</taxonRankName>
+                                                  <taxonRankValue>Insecta</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Order</taxonRankName>
+                                                  <taxonRankValue>Orthoptera</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Family</taxonRankName>
+                                                  <taxonRankValue>Acrididae</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Genus</taxonRankName>
+                                                  <taxonRankValue>Mermiria</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Species</taxonRankName>
+                                                  <taxonRankValue>Mermiria intertexta</taxonRankValue>
+                                                  </taxonomicClassification>
+                                                  </taxonomicClassification>
+                                                  </taxonomicClassification>
+                                                  </taxonomicClassification>
+                                                </taxonomicClassification>
+                                        </taxonomicClassification>
+                                </taxonomicClassification>
+                                <taxonomicClassification>
+                                        <taxonRankName>Kingdom</taxonRankName>
+                                        <taxonRankValue>Animalia</taxonRankValue>
+                                        <taxonomicClassification>
+                                                <taxonRankName>Phylum</taxonRankName>
+                                                <taxonRankValue>Arthropoda</taxonRankValue>
+                                                <taxonomicClassification>
+                                                  <taxonRankName>Class</taxonRankName>
+                                                  <taxonRankValue>Insecta</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Order</taxonRankName>
+                                                  <taxonRankValue>Orthoptera</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Family</taxonRankName>
+                                                  <taxonRankValue>Tettigoniidae</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Genus</taxonRankName>
+                                                  <taxonRankValue>Orchelimum</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Species</taxonRankName>
+                                                  <taxonRankValue>Orchelimum fidicinum</taxonRankValue>
+                                                  <commonName>Salt Marsh Grasshopper</commonName>
+                                                  </taxonomicClassification>
+                                                  </taxonomicClassification>
+                                                  </taxonomicClassification>
+                                                  </taxonomicClassification>
+                                                </taxonomicClassification>
+                                        </taxonomicClassification>
+                                </taxonomicClassification>
+                                <taxonomicClassification>
+                                        <taxonRankName>Kingdom</taxonRankName>
+                                        <taxonRankValue>Animalia</taxonRankValue>
+                                        <taxonomicClassification>
+                                                <taxonRankName>Phylum</taxonRankName>
+                                                <taxonRankValue>Arthropoda</taxonRankValue>
+                                                <taxonomicClassification>
+                                                  <taxonRankName>Class</taxonRankName>
+                                                  <taxonRankValue>Insecta</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Order</taxonRankName>
+                                                  <taxonRankValue>Orthoptera</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Family</taxonRankName>
+                                                  <taxonRankValue>Acrididae</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Genus</taxonRankName>
+                                                  <taxonRankValue>Orphulella</taxonRankValue>
+                                                  <taxonomicClassification>
+                                                  <taxonRankName>Species</taxonRankName>
+                                                  <taxonRankValue>Orphulella pelidna</taxonRankValue>
+                                                  </taxonomicClassification>
+                                                  </taxonomicClassification>
+                                                  </taxonomicClassification>
+                                                  </taxonomicClassification>
+                                                </taxonomicClassification>
+                                        </taxonomicClassification>
+                                </taxonomicClassification>
+                        </taxonomicCoverage>
+                </coverage>
+                <maintenance>
+                        <description>
+                                <para> There have been no changes to the metadata or data files
+                                        since publication online. </para>
+                        </description>
+                </maintenance>
+                <contact id="pers-4">
+                        <positionName>Data Manager</positionName>
+                        <address>
+                                <deliveryPoint>Department for Ecology</deliveryPoint>
+                                <deliveryPoint>Fictitious State University</deliveryPoint>
+                                <deliveryPoint>PO Box 111111</deliveryPoint>
+                                <city>Ficity</city>
+                                <administrativeArea>FI</administrativeArea>
+                                <postalCode>11111-1111</postalCode>
+                        </address>
+                        <phone phonetype="voice">(111) 222-3333</phone>
+                        <phone phonetype="fax">(111) 222-3334</phone>
+                        <electronicMailAddress>fls.data@fi.univ.edu</electronicMailAddress>
+                        <onlineUrl>http://www.fsu.edu/lter</onlineUrl>
+                </contact>
+                <publisher>
+                        <references>org-1</references>
+                </publisher>
+                <methods>
+                        <methodStep>
+                                <description>
+                                        <para>
+                                                <literalLayout>FSL Protocol for Surveying Ground Arthropods has been used</literalLayout>
+                                        </para>
+                                </description>
+                                <protocol>
+                                        <title>FSL Protocol for Surveying Ground Arthropods in school yards</title>
+                                        <creator>
+                                                <references>pers-1</references>
+                                        </creator>
+                                        <pubDate>2000</pubDate>
+                                        <abstract>
+                                                <para>This protocol is being used by FLS arthropod
+                                                  monitoring program. Ground arthropoed are
+                                                  collected in pit fall traps buried into the soil
+                                                  and left for 72 hours. Sampling takes place fours
+                                                  times a year in three location. The trapped
+                                                  arthropods are determined and data entered into a
+                                                  database.</para>
+                                        </abstract>
+                                        <keywordSet>
+                                                <keyword keywordType="theme">Ecology</keyword>
+                                                <keyword keywordType="theme">biodiversity</keyword>
+                                                <keyword keywordType="theme">Population Dynamics</keyword>
+                                                <keyword keywordType="theme">Terrestrial</keyword>
+                                                <keyword keywordType="theme">arthropods</keyword>
+                                                <keyword keywordType="theme">pitfall trap</keyword>
+                                                <keyword keywordType="theme">monitoring</keyword>
+                                                <keyword keywordType="theme">Richness</keyword>
+                                                <keyword keywordType="theme">Abundance</keyword>
+                                        </keywordSet>
+                                        <distribution>
+                                                <online>
+                                                  <onlineDescription>Arthropods Protocol</onlineDescription>
+                                                  <url>http://fls.fi.univ.edu/protocol/arthropods/arthro.htm</url>
+                                                </online>
+                                        </distribution>
+                                        <proceduralStep>
+                                                <description>
+                                                  <section>
+                                                  <title>Materials needed</title>
+                                                  <para>
+                                                  <itemizedlist>
+                                                  <listitem>
+                                                  <para>Bulb planter</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Metric measuring tape</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Metric ruler</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Tweezers</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Magnifying glass</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>16-ounce Solo cups and lids</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Pencils</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Data sheets</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Ziploc bags</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Cooler with blue ice (if you have a freezer
+                                                  in which to store samples, you'll only use the
+                                                  cooler when you're outside. If you don't have a
+                                                  freezer or you don't want to put your samples in
+                                                  it, then be sure to check the ice
+                                                  periodically).</para>
+                                                  </listitem>
+                                                  </itemizedlist>
+                                                  </para>
+                                                  </section>
+                                                  <section>
+                                                  <para>
+                                                  <orderedlist>
+                                                  <listitem>
+                                                  <para>Use pit traps to collect arthropods once a
+                                                  month. The pit traps consist of two 16-ounce Solo
+                                                  cups, one inside the other, buried in the ground
+                                                  so that the top of the cup is ever so slightly
+                                                  below the surface of the soil. (If the top of the
+                                                  cup is above the ground, the bugs will walk around
+                                                  your trap instead of into it.)</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Use a bulb planter to dig 10 holes in a
+                                                  line, 5 meters apart</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Complete a habitat description for each of
+                                                  your trap lines. Record your findings on the
+                                                  habitat description data sheet. You will need to
+                                                  do this before entering data into the CAP LTER
+                                                  database. YOU ONLY NEED TO DO THIS ONCE PER TRAP
+                                                  LINE</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Place the pit traps (Solo cups) in the
+                                                  ground. Remember to use two cups, one inside the
+                                                  other</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Leave the traps alone for 72 hours</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>After 72 hours, empty the traps into Ziploc
+                                                  bags. Use a different bag for each trap (all
+                                                  arthropods collected in one trap are called a
+                                                  "sample") and include a label indicating the
+                                                  collected sample' s corresponding trap site
+                                                  number</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Take the collected arthropods to your indoor
+                                                  workspace for identification</para>
+                                                  </listitem>
+                                                  <listitem>
+                                                  <para>Download the data sheet and identification
+                                                  key and use them to record your
+                                                  observations</para>
+                                                  </listitem>
+                                                  </orderedlist>
+                                                  </para>
+                                                  </section>
+                                                </description>
+                                        </proceduralStep>
+                                </protocol>
+                        </methodStep>
+                        <sampling>
+                                <studyExtent>
+                                        <coverage>
+                                                <temporalCoverage>
+                                                  <rangeOfDates>
+                                                  <beginDate>
+                                                  <calendarDate>1998-11-12</calendarDate>
+                                                  </beginDate>
+                                                  <endDate>
+                                                  <calendarDate>2003-12-31</calendarDate>
+                                                  </endDate>
+                                                  </rangeOfDates>
+                                                </temporalCoverage>
+                                                <geographicCoverage>
+                                                  <geographicDescription>Ficity, FI metropolitan area, USA</geographicDescription>
+                                                  <boundingCoordinates>
+                                                  <westBoundingCoordinate>-112.373614</westBoundingCoordinate>
+                                                  <eastBoundingCoordinate>-111.612936</eastBoundingCoordinate>
+                                                  <northBoundingCoordinate>33.708829</northBoundingCoordinate>
+                                                  <southBoundingCoordinate>33.298975</southBoundingCoordinate>
+                                                  <boundingAltitudes>
+                                                  <altitudeMinimum>300</altitudeMinimum>
+                                                  <altitudeMaximum>600</altitudeMaximum>
+                                                  <altitudeUnits>meter</altitudeUnits>
+                                                  </boundingAltitudes>
+                                                  </boundingCoordinates>
+                                                </geographicCoverage>
+                                        </coverage>
+                                </studyExtent>
+                                <samplingDescription>
+                                        <para>Arthropod pit fall traps are placed in three different
+                                                locations four times a year.</para>
+                                </samplingDescription>
+                                <spatialSamplingUnits>
+                                        <referencedEntityId>example-kmz</referencedEntityId>
+                                </spatialSamplingUnits>
+                        </sampling>
+                        <qualityControl>
+                                <description>
+                                        <para>All specimens are archived for future reference.
+                                                Quality control during data entry is achieved with
+                                                standard database techniques of pulldowns that
+                                                prevent typos and constraints. Scientists inspect
+                                                standard data summary statistics after data
+                                                entry.</para>
+                                </description>
+                        </qualityControl>
+                </methods>
+                <project>
+                        <title>Fictitious Longterm Ecological Research Site</title>
+                        <personnel id="pers-12" system="FLS">
+                                <individualName>
+                                        <givenName>Kim</givenName>
+                                        <givenName>L.</givenName>
+                                        <surName>Pi</surName>
+                                </individualName>
+                                <address>
+                                        <deliveryPoint>Department for Ecology</deliveryPoint>
+                                        <deliveryPoint>Fictitious State University</deliveryPoint>
+                                        <deliveryPoint>PO Box 111111</deliveryPoint>
+                                        <city>Ficity</city>
+                                        <administrativeArea>FI</administrativeArea>
+                                        <postalCode>11111-1111</postalCode>
+                                </address>
+                                <role>principalInvestigator</role>
+                        </personnel>
+                        <personnel id="im" system="FLS">
+                                <individualName>
+                                        <givenName>Ima</givenName>
+                                        <givenName>Great</givenName>
+                                        <surName>IM</surName>
+                                </individualName>
+                                <address>
+                                        <deliveryPoint>Department for Ecology</deliveryPoint>
+                                        <deliveryPoint>Fictitious State University</deliveryPoint>
+                                        <deliveryPoint>PO Box 111111</deliveryPoint>
+                                        <city>Ficity</city>
+                                        <administrativeArea>FI</administrativeArea>
+                                        <postalCode>11111-1111</postalCode>
+                                </address>
+                                <role>informationManager</role>
+                        </personnel>
+                        <abstract>
+                                <para>The FLS is committed to further the <itemizedlist>
+                                                <listitem>
+                                                  <para>Understanding ecological phenomena over long
+                                                  temporal and large spatial scales</para>
+                                                </listitem>
+                                                <listitem>
+                                                  <para>Creating a legacy of well-designed and
+                                                  documented long-term experiments and observations
+                                                  for future generations</para>
+                                                </listitem>
+                                                <listitem>
+                                                  <para>Conducting major synthetic and theoretical
+                                                  efforts</para>
+                                                </listitem>
+                                                <listitem>
+                                                  <para>Providing information for the identification
+                                                  and solution of ecological problems</para>
+                                                </listitem>
+                                        </itemizedlist>
+                                </para>
+                        </abstract>
+                        <funding>
+                                <para>National Science Foundation under Grant No. DEB 9999999,
+                                        Ficticous Long-Term Ecological Research (FLS LTER)</para>
+                        </funding>
+                        <relatedProject>
+                                <title>FSL basic monitoring program</title>
+                                <personnel id="pers-30" system="FLS">
+                                        <individualName>
+                                                <salutation>Dr.</salutation>
+                                                <givenName>Eva</givenName>
+                                                <givenName>M.</givenName>
+                                                <surName>Scientist</surName>
+                                        </individualName>
+                                        <address>
+                                                <deliveryPoint>Department for Ecology</deliveryPoint>
+                                                <deliveryPoint>Fictitious State University</deliveryPoint>
+                                                <deliveryPoint>PO Box 111111</deliveryPoint>
+                                                <city>Ficity</city>
+                                                <administrativeArea>FI</administrativeArea>
+                                                <postalCode>11111-1111</postalCode>
+                                        </address>
+                                        <role>principalInvestigator</role>
+                                </personnel>
+                                <personnel id="pers-130" system="FLS">
+                                        <individualName>
+                                                <givenName>Monica</givenName>
+                                                <givenName>D.</givenName>
+                                                <surName>Techy</surName>
+                                        </individualName>
+                                        <address>
+                                                <deliveryPoint>Department for Ecology</deliveryPoint>
+                                                <deliveryPoint>Fictitious State University</deliveryPoint>
+                                                <deliveryPoint>PO Box 111111</deliveryPoint>
+                                                <city>Ficity</city>
+                                                <administrativeArea>FI</administrativeArea>
+                                                <postalCode>11111-1111</postalCode>
+                                        </address>
+                                        <role> principalInvestigator</role>
+                                </personnel>
+                                <abstract>
+                                        <para>The FLS basic monitoring program consists of
+                                                monitoring of arthropod populations, plant net
+                                                primary productivity, and bird populations.
+                                                Monitoring takes place at 3 locations, 4 times a
+                                                year. Climate parameters a continuously measured at
+                                                all stations.</para>
+                                </abstract>
+                        </relatedProject>
+                </project>
+                <dataTable>
+                        <entityName>Invertebrate Data</entityName>
+                        <physical>
+                                <objectName>FLS-1.TXT</objectName>
+                                <size unit="rows">561</size>
+                                <characterEncoding>ASCII</characterEncoding>
+                                <dataFormat>
+                                        <textFormat>
+                                                <numHeaderLines>1</numHeaderLines>
+                                                <numFooterLines>0</numFooterLines>
+                                                <recordDelimiter>\r</recordDelimiter>
+                                                <numPhysicalLinesPerRecord>1</numPhysicalLinesPerRecord>
+                                                <attributeOrientation>column</attributeOrientation>
+                                                <simpleDelimited>
+                                                  <fieldDelimiter>\t</fieldDelimiter>
+                                                </simpleDelimited>
+                                        </textFormat>
+                                </dataFormat>
+                                <distribution>
+                                        <online>
+                                                <onlineDescription>fls-1 Data File</onlineDescription>
+                                                <url>http://www.fsu.edu/lter/data/fls-1.txt</url>
+                                        </online>
+                                        <access authSystem="knb" order="denyFirst" scope="document">
+                                                <allow>
+                                                  <principal>uid=FLS,o=lter,dc=ecoinformatics,dc=org</principal>
+                                                  <permission>all</permission>
+                                                </allow>
+                                                <deny>
+                                                  <principal>public</principal>
+                                                  <permission>all</permission>
+                                                </deny>
+                                        </access>
+                                </distribution>
+                        </physical>
+                        <additionalInfo>
+                                <para>Data Anomalies: Site 2, zone 1, plot 7 substitutes for plot 6;
+                                        Site 7, zone 2, plot 2 substitutes for plot 3; Site 8, zone
+                                        1, plots 2 and 7 substitute for plots 3 and 6; Site 9, zone
+                                        2, plot 7 substitutes for plot 6.</para>
+                        </additionalInfo>
+                        <attributeList>
+                                <attribute id="att.1">
+                                        <attributeName>Site</attributeName>
+                                        <attributeDefinition>FLS-LTER sampling site</attributeDefinition>
+                                        <storageType>integer</storageType>
+                                        <measurementScale>
+                                                <ordinal>
+                                                  <nonNumericDomain>
+                                                  <enumeratedDomain>
+                                                  <codeDefinition>
+                                                  <code>1</code>
+                                                  <definition>FLS study site 1</definition>
+                                                  </codeDefinition>
+                                                  <codeDefinition>
+                                                  <code>2</code>
+                                                  <definition>FLS study site 2</definition>
+                                                  </codeDefinition>
+                                                  <codeDefinition>
+                                                  <code>3</code>
+                                                  <definition>FLS study site 3</definition>
+                                                  </codeDefinition>
+                                                  <codeDefinition>
+                                                  <code>4</code>
+                                                  <definition>FLS study site 4</definition>
+                                                  </codeDefinition>
+                                                  </enumeratedDomain>
+                                                  </nonNumericDomain>
+                                                </ordinal>
+                                        </measurementScale>
+                                </attribute>
+                                <attribute id="att.2">
+                                        <attributeName>Year</attributeName>
+                                        <attributeDefinition>Calendar year of the observation from years 1990 - 2010</attributeDefinition>
+                                        <storageType>integer</storageType>
+                                        <measurementScale>
+                                                <dateTime>
+                                                  <formatString>YYYY</formatString>
+                                                  <dateTimePrecision>1</dateTimePrecision>
+                                                  <dateTimeDomain>
+                                                  <bounds>
+                                                  <minimum exclusive="false">1993</minimum>
+                                                  <maximum exclusive="false">2003</maximum>
+                                                  </bounds>
+                                                  </dateTimeDomain>
+                                                </dateTime>
+                                        </measurementScale>
+                                </attribute>
+                                <attribute id="att.3">
+                                        <attributeName>Month</attributeName>
+                                        <attributeDefinition>Calendar month of the observation</attributeDefinition>
+                                        <storageType>integer</storageType>
+                                        <measurementScale>
+                                                <dateTime>
+                                                  <formatString>MM</formatString>
+                                                  <dateTimePrecision>1</dateTimePrecision>
+                                                  <dateTimeDomain>
+                                                  <bounds>
+                                                  <minimum exclusive="false">1</minimum>
+                                                  <maximum exclusive="false">12</maximum>
+                                                  </bounds>
+                                                  </dateTimeDomain>
+                                                </dateTime>
+                                        </measurementScale>
+                                </attribute>
+                                <attribute id="att.4">
+                                        <attributeName>Day</attributeName>
+                                        <attributeDefinition>Calendar day of the observation</attributeDefinition>
+                                        <storageType>integer</storageType>
+                                        <measurementScale>
+                                                <dateTime>
+                                                  <formatString>DD</formatString>
+                                                  <dateTimePrecision>1</dateTimePrecision>
+                                                  <dateTimeDomain>
+                                                  <bounds>
+                                                  <minimum exclusive="false">1</minimum>
+                                                  <maximum exclusive="false">31</maximum>
+                                                  </bounds>
+                                                  </dateTimeDomain>
+                                                </dateTime>
+                                        </measurementScale>
+                                </attribute>
+                                <attribute id="att.5">
+                                        <attributeName>Transect</attributeName>
+                                        <attributeDefinition>Transect number (randomly placed within the study site)</attributeDefinition>
+                                        <storageType>integer</storageType>
+                                        <measurementScale>
+                                                <nominal>
+                                                  <nonNumericDomain>
+                                                  <textDomain>
+                                                  <definition>Transect number (randomly placed)</definition>
+                                                  </textDomain>
+                                                  </nonNumericDomain>
+                                                </nominal>
+                                        </measurementScale>
+                                </attribute>
+                                <attribute id="att.6">
+                                        <attributeName>Species_Code</attributeName>
+                                        <attributeDefinition>Coded species name of the insect observed</attributeDefinition>
+                                        <storageType>string</storageType>
+                                        <measurementScale>
+                                                <nominal>
+                                                  <nonNumericDomain>
+                                                  <enumeratedDomain>
+                                                  <codeDefinition>
+                                                  <code>G0</code>
+                                                  <definition>Other grasshoppers</definition>
+                                                  </codeDefinition>
+                                                  <codeDefinition>
+                                                  <code>G1</code>
+                                                  <definition>Orchelimum spp.</definition>
+                                                  </codeDefinition>
+                                                  <codeDefinition>
+                                                  <code>G2</code>
+                                                  <definition>Paroxya clavuliger</definition>
+                                                  </codeDefinition>
+                                                  <codeDefinition>
+                                                  <code>G3</code>
+                                                  <definition>Orphulella pelidna</definition>
+                                                  </codeDefinition>
+                                                  <codeDefinition>
+                                                  <code>G4</code>
+                                                  <definition>Mermiria intertexta</definition>
+                                                  </codeDefinition>
+                                                  <codeDefinition>
+                                                  <code>G5</code>
+                                                  <definition>Schistocerca obscura</definition>
+                                                  </codeDefinition>
+                                                  <codeDefinition>
+                                                  <code>G6</code>
+                                                  <definition>Romalea guttatus</definition>
+                                                  </codeDefinition>
+                                                  </enumeratedDomain>
+                                                  </nonNumericDomain>
+                                                </nominal>
+                                        </measurementScale>
+                                </attribute>
+                                <attribute id="att.7">
+                                        <attributeName>Count</attributeName>
+                                        <attributeDefinition>Number of individuals observed</attributeDefinition>
+                                        <storageType>integer</storageType>
+                                        <measurementScale>
+                                                <interval>
+                                                  <unit>
+                                                  <standardUnit>number</standardUnit>
+                                                  </unit>
+                                                  <precision>1</precision>
+                                                  <numericDomain>
+                                                  <numberType>whole</numberType>
+                                                  <bounds>
+                                                  <minimum exclusive="false">0</minimum>
+                                                  </bounds>
+                                                  </numericDomain>
+                                                </interval>
+                                        </measurementScale>
+                                        <missingValueCode>
+                                                <code>NaN</code>
+                                                <codeExplanation>value not recorded or invalid</codeExplanation>
+                                        </missingValueCode>
+                                </attribute>
+                                <attribute id="att.8">
+                                        <attributeName>cond</attributeName>
+                                        <attributeLabel>Conductivity</attributeLabel>
+                                        <attributeDefinition>measured with SeaBird Elecronics
+                                                CTD-911</attributeDefinition>
+                                        <storageType>float</storageType>
+                                        <measurementScale>
+                                                <ratio>
+                                                  <unit>
+                                                  <customUnit>siemensPerMeter</customUnit>
+                                                  </unit>
+                                                  <precision>0.0001</precision>
+                                                  <numericDomain>
+                                                  <numberType>real</numberType>
+                                                  <bounds>
+                                                  <minimum exclusive="false">0</minimum>
+                                                  <maximum exclusive="false">40</maximum>
+                                                  </bounds>
+                                                  </numericDomain>
+                                                </ratio>
+                                        </measurementScale>
+                                </attribute>
+
+                        </attributeList>
+                </dataTable>
+                <otherEntity>
+                        <entityName>example-kmz</entityName>
+                        <entityDescription>FLS-1 Research site locations</entityDescription>
+                        <physical>
+                                <objectName>fls-1.kmz</objectName>
+                                <dataFormat>
+                                        <externallyDefinedFormat>
+                                                <formatName>KMZ</formatName>
+                                        </externallyDefinedFormat>
+
+                                </dataFormat>
+                                <distribution>
+                                        <online>
+                                                <url>http://www.fsu.edu/lter/maps/fsl-1.kmz</url>
+                                        </online>
+                                </distribution>
+                        </physical>
+                        <entityType>KMZ</entityType>
+                </otherEntity>
+        </dataset>
+        <additionalMetadata>
+                <metadata>
+                        <stmml:unitList>
+                                <stmml:unit id="siemensPerMeter" name="siemensPerMeter"
+                                        abbreviation="S/m" unitType="conductance" parentSI="siemen"
+                                        multiplierToSI="1" constantToSI="0">
+                                        <stmml:description>conductivity unit</stmml:description>
+                                </stmml:unit>
+                        </stmml:unitList>
+                </metadata>
+        </additionalMetadata>
+</eml:eml>

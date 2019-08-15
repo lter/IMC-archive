@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?> <hrv:harvestList xmlns:hrv="eml://ecoinformatics.org/harvestList">
+<document>
+    <docid>
+       <scope>knb-lter-fls</scope>
+       <identifier>101</identifier>
+       <revision>13</revision>
+    </docid>
+    <documentType>eml://ecoinformatics.org/eml-2.0.1</documentType>
+    <documentURL>http://fls.lternet.edu/~janedoe/eml/knb-lter-fls.101.13.xml</documentURL>
+</document>
+<document>
+    <docid>
+       <scope>knb-lter-fls</scope>
+       <identifier>102</identifier>
+       <revision>4</revision>
+    </docid>
+    <documentType>eml://ecoinformatics.org/eml-2.0.1</documentType>
+    <documentURL>http://fls.lternet.edu/~janedoe/eml/knb-lter-fls.102.4.xml</documentURL>
+</document>
+<document>
+    <docid>
+       <scope>knb-lter-fls</scope>
+       <identifier>103</identifier>
+       <revision>5</revision>
+    </docid>
+    <documentType>eml://ecoinformatics.org/eml-2.0.1</documentType>
+    <documentURL>http://fls.lternet.edu/~janedoe/eml/anyFileName.xml</documentURL>
+</document>
+</hrv:harvestList>
